@@ -1,118 +1,145 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { Search, PenTool, Code, Megaphone, Film, ArrowRight, CheckCircle, HelpCircle } from 'lucide-react';
+import { Search, PenTool, Code, Megaphone, Users, PhoneCall, ArrowRight, CheckCircle, HelpCircle } from 'lucide-react';
 
 const Services = () => {
   const services = [
     {
       id: 'seo',
       icon: Search,
-      title: 'SEO Services in Kochi',
-      subtitle: 'Rank locally. Grow organic traffic. Convert better.',
-      description: 'Comprehensive SEO services tailored for Kerala businesses. From technical optimization to local search dominance, we help you rank where your customers are searching.',
+      title: 'SEO Services',
+      subtitle: 'Rank higher. Drive quality traffic. Improve conversions.',
+      description:
+        'We deliver complete SEO strategies for your business — from technical optimization to on‑page improvements and content planning, all designed to get your brand found easily.',
       deliverables: [
         'Technical & on-page SEO',
-        'Local SEO (Google Business Profile)',
-        'Content & internal links',
-        'Reporting & growth sprints'
+        'Local SEO optimization',
+        'Content recommendations',
+        'Monthly performance reports',
       ],
       ctaText: 'Request SEO Audit',
-      ctaHref: '/contact?service=seo'
+      ctaHref: '/contact?service=seo',
     },
     {
       id: 'content',
       icon: PenTool,
-      title: 'Content Writing in Kochi',
-      subtitle: 'Clear, conversion-focused content in English & Malayalam.',
-      description: 'Content that connects with Kerala audiences. From website copy to blog posts, ad scripts to social media content – we create words that work.',
+      title: 'Content Writing',
+      subtitle: 'Powerful, persuasive copy that connects and converts.',
+      description:
+        'We craft impactful content — from website copy to blogs, ads, and social media messaging — focused on clarity, relevance, and engagement.',
       deliverables: [
         'Web & landing copy',
-        'Blogs & thought leadership',
-        'Ad copy & scripts',
-        'Content strategy & calendars'
+        'Blogs & thought pieces',
+        'Ad copy & brand tone',
+        'Content calendar planning',
       ],
       ctaText: 'Get Content Plan',
-      ctaHref: '/contact?service=content'
+      ctaHref: '/contact?service=content',
     },
     {
       id: 'web',
       icon: Code,
-      title: 'Website Development in Kochi',
-      subtitle: 'Fast, secure, SEO-first websites that convert.',
-      description: 'Modern websites built for Kerala businesses. Mobile-optimized, search-friendly, and designed to turn visitors into customers.',
+      title: 'Website Development',
+      subtitle: 'Modern, SEO‑ready websites built for performance.',
+      description:
+        'Fast, secure, mobile‑optimized sites that showcase your brand and drive conversions. Built using scalable, modern frameworks.',
       deliverables: [
         'WordPress / Headless builds',
-        'E-commerce & landing pages',
-        'Speed, security, analytics',
-        'On-page SEO setup'
+        'E‑commerce / Landing pages',
+        'Performance & analytics setup',
+        'On‑page SEO configuration',
       ],
       ctaText: 'Start Your Website',
-      ctaHref: '/contact?service=web'
+      ctaHref: '/contact?service=web',
     },
     {
       id: 'ads',
       icon: Megaphone,
-      title: 'Meta Ads (Facebook/Instagram) in Kerala',
-      subtitle: 'Full-funnel ads: creative, targeting, optimization, scale.',
-      description: 'Facebook and Instagram advertising that delivers results. From awareness campaigns to conversion optimization, we help Kerala businesses reach their ideal customers.',
+      title: 'Meta & Google Ads',
+      subtitle: 'Smart campaigns designed to attract and convert.',
+      description:
+        'We plan, design, and optimize ad campaigns across Meta and Google to maximize visibility, clicks, and lead generation—all tracked for measurable ROI.',
       deliverables: [
         'Campaign strategy & setup',
-        'Creatives & testing',
-        'Pixel, events & GA4',
-        'Weekly optimization & reports'
+        'Creatives & A/B testing',
+        'Pixel, events, and analytics integration',
+        'Ongoing optimization & reports',
       ],
-      ctaText: 'Launch Meta Ads',
-      ctaHref: '/contact?service=ads'
+      ctaText: 'Launch Ad Campaigns',
+      ctaHref: '/contact?service=ads',
     },
     {
-      id: 'movie',
-      icon: Film,
-      title: 'Movie Promotion in Kerala',
-      subtitle: 'Digital-first film marketing for Kerala audiences.',
-      description: 'Specialized digital marketing for Malayalam films. From teaser launches to box office campaigns, we help filmmakers connect with Kerala audiences and fill theatres.',
+      id: 'targeted',
+      icon: Users,
+      title: 'Advertisement on Targeted Audience',
+      subtitle: 'Reach the exact people who fit your ideal customer profile.',
+      description:
+        'We identify, segment, and advertise to your perfect audience using behavioral data, demographics, and location‑based targeting.',
       deliverables: [
-        'Trailer & song campaign rollouts',
-        'Influencer & creator collabs',
-        'Reels, teasers, countdowns',
-        'Theatre & OTT push'
+        'Audience research & targeting',
+        'Custom look‑alike segments',
+        'Ad placement & monitoring',
+        'Detailed targeting reports',
       ],
-      ctaText: 'Promote Your Film',
-      ctaHref: '/contact?service=movie'
-    }
+      ctaText: 'Target Your Audience',
+      ctaHref: '/contact?service=targeted',
+    },
+    {
+      id: 'telecall',
+      icon: PhoneCall,
+      title: 'Telecall & Lead Closing',
+      subtitle: 'Human connection that turns leads into customers.',
+      description:
+        'Our team strategically handles calls from leads generated online — answering queries, nurturing interest, and helping close more deals efficiently.',
+      deliverables: [
+        'Dedicated calling agents',
+        'Prompt lead follow‑up',
+        'Qualification & scheduling',
+        'Performance tracking reports',
+      ],
+      ctaText: 'Set Up Telecalling',
+      ctaHref: '/contact?service=telecall',
+    },
   ];
 
   const faqs = [
     {
-      question: 'Do you serve clients outside Kochi?',
-      answer: 'Yes, we work with clients across Kerala and also serve remote clients worldwide. Our local expertise in Kerala markets is valuable regardless of your physical location.'
+      question: 'Do you serve clients outside Kerala?',
+      answer:
+        'Yes, we collaborate with businesses across India and internationally, using our Kerala‑based expertise to create regionally informed digital strategies.',
     },
     {
-      question: 'Do you offer Malayalam content?',
-      answer: 'Absolutely! We create high-quality content in both English and Malayalam, perfect for local SEO campaigns and connecting with Kerala audiences authentically.'
+      question: 'Can we get content in Malayalam?',
+      answer:
+        'Absolutely. We create engaging and natural Malayalam content for posts, blogs, and ads — ideal for regional marketing and authenticity.',
     },
     {
-      question: 'What\'s your minimum engagement?',
-      answer: 'We offer both project-based work and monthly retainers. Project minimums start at ₹25,000, while retainers begin at ₹15,000/month depending on services.'
+      question: 'What are your pricing models?',
+      answer:
+        'We provide both project‑based and monthly retainer options. Project work starts at ₹25,000, while ongoing retainers begin at ₹15,000/month.',
     },
     {
-      question: 'How fast can we start?',
-      answer: 'Typically within 7–10 business days after initial consultation and strategy approval. Emergency projects can be accommodated with expedited timelines.'
-    }
+      question: 'How soon can we begin?',
+      answer:
+        'Typically within 7–10 business days after the initial consultation and strategy approval. Urgent timelines can also be accommodated.',
+    },
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white text-black">
       {/* Hero Section */}
-      <section className="section-padding bg-gradient-to-b from-gray-950 via-gray-950 to-gray-900">
-        <div className="max-w-7xl mx-auto container-padding">
-          <div className="max-w-4xl mx-auto text-center animate-fade-in">
-            <h1 className="text-4xl md:text-5xl font-heading font-bold text-gray-100 mb-6">
-              Digital Marketing Services in <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-secondary-500">Kochi</span>
+      <section className="section-padding bg-white">
+        <div className="max-w-7xl mx-auto container-padding text-center">
+          <div className="max-w-4xl mx-auto animate-fade-in">
+            <h1 className="text-4xl md:text-5xl font-[Syne] font-bold mb-6">
+              Our Digital Marketing Services
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 text-balance">
-              Full-stack digital marketing services in Kochi: SEO, content writing, website development, Meta ads, and movie promotion.
+            <p className="text-xl md:text-2xl mb-8 text-black/80">
+              Expert strategies to boost your visibility, leads, and growth.
             </p>
-            <Link to="/contact" className="btn-primary text-lg px-8 py-4 inline-flex items-center space-x-2">
+            <Link
+              to="/contact"
+              className="text-lg px-8 py-4 rounded-md font-semibold bg-black text-white hover:bg-gray-800 transition-colors duration-200 inline-flex items-center space-x-2"
+            >
               <span>Get Free Consultation</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
@@ -121,58 +148,56 @@ const Services = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="section-padding bg-gray-900">
+      <section className="section-padding bg-white">
         <div className="max-w-7xl mx-auto container-padding">
           <div className="space-y-20">
             {services.map((service, index) => {
               const Icon = service.icon;
               const isEven = index % 2 === 0;
-              
+
               return (
-                <div 
+                <div
                   key={service.id}
                   id={service.id}
-                  className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${isEven ? '' : 'lg:grid-flow-col-dense'}`}
+                  className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
+                    isEven ? '' : 'lg:grid-flow-col-dense'
+                  }`}
                 >
                   <div className={isEven ? 'lg:order-1' : 'lg:order-2'}>
                     <div className="flex items-center space-x-4 mb-6">
-                      <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-2xl flex items-center justify-center">
-                        <Icon className="w-8 h-8 text-gray-950" />
+                      <div className="w-16 h-16 bg-black rounded-2xl flex items-center justify-center">
+                        <Icon className="w-8 h-8 text-white" />
                       </div>
-                      <div>
-                        <h2 className="text-2xl md:text-3xl font-heading font-bold text-gray-100">
-                          {service.title}
-                        </h2>
-                      </div>
+                      <h2 className="text-2xl md:text-3xl font-[Syne] font-bold">
+                        {service.title}
+                      </h2>
                     </div>
-                    
-                    <p className="text-lg text-primary-500 font-medium mb-4">
+
+                    <p className="text-lg text-black font-medium mb-4">
                       {service.subtitle}
                     </p>
-                    
-                    <p className="text-gray-400 mb-6 leading-relaxed">
+
+                    <p className="text-black/70 mb-6 leading-relaxed">
                       {service.description}
                     </p>
-                    
-                    <Link 
+
+                    <Link
                       to={service.ctaHref}
-                      className="btn-primary inline-flex items-center space-x-2"
+                      className="inline-flex items-center space-x-2 px-6 py-3 rounded-md bg-black text-white hover:bg-gray-800 transition-colors duration-200"
                     >
                       <span>{service.ctaText}</span>
                       <ArrowRight className="w-5 h-5" />
                     </Link>
                   </div>
-                  
+
                   <div className={`${isEven ? 'lg:order-2' : 'lg:order-1'}`}>
-                    <div className="card">
-                      <h3 className="font-heading font-semibold text-gray-100 text-lg mb-4">
-                        What's Included:
-                      </h3>
+                    <div className="p-6 border border-gray-200 rounded-2xl shadow-sm bg-white">
+                      <h3 className="font-semibold text-lg mb-4">What's Included:</h3>
                       <ul className="space-y-3">
                         {service.deliverables.map((deliverable, idx) => (
                           <li key={idx} className="flex items-start space-x-3">
-                            <CheckCircle className="w-5 h-5 text-success-500 mt-0.5 flex-shrink-0" />
-                            <span className="text-gray-400">{deliverable}</span>
+                            <CheckCircle className="w-5 h-5 text-black mt-0.5 flex-shrink-0" />
+                            <span className="text-black/70">{deliverable}</span>
                           </li>
                         ))}
                       </ul>
@@ -186,29 +211,25 @@ const Services = () => {
       </section>
 
       {/* FAQs Section */}
-      <section className="section-padding bg-gray-950">
+      <section className="section-padding bg-gray-50">
         <div className="max-w-4xl mx-auto container-padding">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-100 mb-4">
+            <h2 className="text-3xl md:text-4xl font-[Syne] font-bold mb-4">
               Frequently Asked Questions
             </h2>
-            <p className="text-gray-400 text-lg">
-              Everything you need to know about our services
+            <p className="text-black/70 text-lg">
+              Everything you need to know about our services.
             </p>
           </div>
 
           <div className="space-y-8">
             {faqs.map((faq, index) => (
-              <div key={index} className="card">
+              <div key={index} className="p-6 border border-gray-200 rounded-2xl shadow-sm bg-white">
                 <div className="flex items-start space-x-4">
-                  <HelpCircle className="w-6 h-6 text-primary-500 mt-1 flex-shrink-0" />
+                  <HelpCircle className="w-6 h-6 text-black mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-heading font-semibold text-gray-100 text-lg mb-3">
-                      {faq.question}
-                    </h3>
-                    <p className="text-gray-400 leading-relaxed">
-                      {faq.answer}
-                    </p>
+                    <h3 className="font-semibold text-lg mb-3">{faq.question}</h3>
+                    <p className="text-black/70 leading-relaxed">{faq.answer}</p>
                   </div>
                 </div>
               </div>
@@ -218,23 +239,26 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-gradient-to-b from-gray-900 to-gray-950">
+      <section className="section-padding bg-white">
         <div className="max-w-7xl mx-auto container-padding text-center">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-100 mb-4">
+          <h2 className="text-3xl md:text-4xl font-[Syne] font-bold mb-4">
             Ready to Get Started?
           </h2>
-          <p className="text-gray-400 text-lg mb-8 max-w-2xl mx-auto">
-            Let's discuss your goals and create a custom digital marketing strategy for your Kerala business.
+          <p className="text-black/70 text-lg mb-8 max-w-2xl mx-auto">
+            Let's discuss your goals and build a custom digital marketing plan to grow your business faster.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" className="btn-primary text-lg px-8 py-4">
+            <Link
+              to="/contact"
+              className="text-lg px-8 py-4 rounded-md font-semibold bg-black text-white hover:bg-gray-800 transition-colors duration-200"
+            >
               Get Free Strategy Session
             </Link>
-            <a 
-              href="https://wa.me/+91XXXXXXXXXX" 
-              target="_blank" 
+            <a
+              href="https://wa.me/+91XXXXXXXXXX"
+              target="_blank"
               rel="noopener noreferrer"
-              className="btn-success text-lg px-8 py-4"
+              className="text-lg px-8 py-4 rounded-md font-semibold border border-black text-black hover:bg-black hover:text-white transition-colors duration-200"
             >
               WhatsApp Us Now
             </a>
