@@ -240,29 +240,36 @@ const Home = () => {
     </section>
 
     {/* Outcomes Section */}
-<section className="section-padding bg-gray-900">
+<section className="section-padding bg-white">
   <div className="max-w-7xl mx-auto container-padding">
-    <div className="text-center mb-16">
-      <h2 className="text-3xl md:text-4xl font-[Syne] font-bold text-white mb-4">
+    {/* Black panel */}
+    <div className="bg-black rounded-3xl p-10 md:p-16 text-center text-white shadow-xl">
+      <h2 className="text-3xl md:text-4xl font-[Syne] font-bold mb-4">
         Proven Results
       </h2>
-      <p className="text-gray-400 text-lg max-w-xl mx-auto">
+      <p className="text-gray-300 text-lg max-w-xl mx-auto mb-12">
         Real outcomes for Kerala businesses
       </p>
-    </div>
 
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div className="text-center">
-        <div className="text-4xl font-[Syne] font-bold text-primary-500 mb-2">150+</div>
-        <div className="text-gray-400">Leads generated in 30 days</div>
-      </div>
-      <div className="text-center">
-        <div className="text-4xl font-[Syne] font-bold text-secondary-500 mb-2">65%</div>
-        <div className="text-gray-400">Lower cost per acquisition</div>
-      </div>
-      <div className="text-center">
-        <div className="text-4xl font-[Syne] font-bold text-success-500 mb-2">4×</div>
-        <div className="text-gray-400">Organic traffic growth</div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="text-center">
+          <div className="text-4xl font-[Syne] font-bold text-primary-500 mb-2">
+            150+
+          </div>
+          <div className="text-gray-300">Leads generated in 30 days</div>
+        </div>
+        <div className="text-center">
+          <div className="text-4xl font-[Syne] font-bold text-secondary-500 mb-2">
+            65%
+          </div>
+          <div className="text-gray-300">Lower cost per acquisition</div>
+        </div>
+        <div className="text-center">
+          <div className="text-4xl font-[Syne] font-bold text-success-500 mb-2">
+            4×
+          </div>
+          <div className="text-gray-300">Organic traffic growth</div>
+        </div>
       </div>
     </div>
   </div>
@@ -300,6 +307,69 @@ const Home = () => {
   </div>
 </section>
 
+{/* Blog Preview */}
+<section className="section-padding bg-white">
+  <div className="max-w-7xl mx-auto container-padding">
+    <div className="flex justify-between items-end mb-12">
+      <div>
+        <h2 className="text-3xl md:text-4xl font-[Syne] font-bold text-black mb-4">
+          Latest Insights
+        </h2>
+        <p className="text-black/70 text-lg">
+          Digital marketing strategies for Kerala businesses
+        </p>
+      </div>
+      <Link
+        to="/blog"
+        className="hidden md:inline-flex items-center space-x-2 px-8 py-3 font-semibold rounded-md border border-black text-black hover:bg-black hover:text-white transition-colors duration-200"
+      >
+        <span>View all posts</span>
+        <ArrowRight className="w-5 h-5" />
+      </Link>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+      {blogPosts.map((post, index) => (
+        <article
+          key={index}
+          className="p-6 border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition-all duration-200 group bg-white"
+        >
+          <div className="flex items-center space-x-2 mb-3">
+            <span className="bg-black/5 text-black/70 px-2 py-1 rounded text-xs font-medium">
+              {post.category}
+            </span>
+            <span className="text-black/50 text-xs flex items-center space-x-1">
+              <Clock className="w-3 h-3" />
+              <span>{post.readTime}</span>
+            </span>
+          </div>
+          <h3 className="font-[Syne] font-semibold text-black mb-3 group-hover:text-gray-700 transition-colors duration-200">
+            <Link to={post.href}>{post.title}</Link>
+          </h3>
+          <p className="text-black/70 text-sm mb-4">{post.excerpt}</p>
+          <Link
+            to={post.href}
+            className="font-semibold text-black text-sm flex items-center space-x-2 border-b border-black/10 hover:border-black/60 transition-all duration-200 group-hover:space-x-3"
+          >
+            <span>Read more</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </article>
+      ))}
+    </div>
+
+    <div className="text-center md:hidden">
+      <Link
+        to="/blog"
+        className="px-8 py-3 font-semibold rounded-md border border-black text-black hover:bg-black hover:text-white transition-colors duration-200 inline-flex items-center space-x-2"
+      >
+        <span>View all posts</span>
+        <ArrowRight className="w-5 h-5" />
+      </Link>
+    </div>
+  </div>
+</section>
+
       {/* Local SEO Section */}
       <section className="section-padding bg-gray-950">
         <div className="max-w-7xl mx-auto container-padding">
@@ -322,88 +392,39 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Blog Preview */}
-      <section className="section-padding bg-gray-900">
-        <div className="max-w-7xl mx-auto container-padding">
-          <div className="flex justify-between items-end mb-12">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-100 mb-4">
-                Latest Insights
-              </h2>
-              <p className="text-gray-400 text-lg">
-                Digital marketing strategies for Kerala businesses
-              </p>
-            </div>
-            <Link to="/blog" className="btn-secondary hidden md:inline-flex items-center space-x-2">
-              <span>View all posts</span>
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            {blogPosts.map((post, index) => (
-              <article key={index} className="card group">
-                <div className="flex items-center space-x-2 mb-3">
-                  <span className="bg-primary-500/10 text-primary-500 px-2 py-1 rounded text-xs font-medium">
-                    {post.category}
-                  </span>
-                  <span className="text-gray-500 text-xs flex items-center space-x-1">
-                    <Clock className="w-3 h-3" />
-                    <span>{post.readTime}</span>
-                  </span>
-                </div>
-                <h3 className="font-heading font-semibold text-gray-100 mb-3 group-hover:text-primary-500 transition-colors duration-200">
-                  <Link to={post.href}>
-                    {post.title}
-                  </Link>
-                </h3>
-                <p className="text-gray-400 text-sm mb-4">
-                  {post.excerpt}
-                </p>
-                <Link 
-                  to={post.href}
-                  className="text-primary-500 hover:text-primary-400 font-medium text-sm flex items-center space-x-2 group-hover:space-x-3 transition-all duration-200"
-                >
-                  <span>Read more</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </article>
-            ))}
-          </div>
-
-          <div className="text-center md:hidden">
-            <Link to="/blog" className="btn-secondary inline-flex items-center space-x-2">
-              <span>View all posts</span>
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Final CTA */}
-      <section className="section-padding bg-gradient-to-b from-gray-950 to-gray-900">
-        <div className="max-w-7xl mx-auto container-padding text-center">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-100 mb-4">
-            Get a free audit in 24 hours
-          </h2>
-          <p className="text-gray-400 text-lg mb-8 max-w-2xl mx-auto">
-            Ready to grow your Kerala business? Get a comprehensive digital marketing audit and custom growth strategy.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" className="btn-primary text-lg px-8 py-4">
-              Get Proposal
-            </Link>
-            <a 
-              href="https://wa.me/+91XXXXXXXXXX" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="btn-success text-lg px-8 py-4"
-            >
-              WhatsApp Us
-            </a>
-          </div>
-        </div>
-      </section>
+<section className="section-padding bg-white">
+  <div className="max-w-7xl mx-auto container-padding text-center">
+    {/* Black rectangular box */}
+    <div className="bg-black rounded-3xl p-10 md:p-16 shadow-xl">
+      <h2 className="text-3xl md:text-4xl font-[Syne] font-bold text-white mb-4">
+        Get a free audit in 24 hours
+      </h2>
+      <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
+        Ready to grow your Kerala business? Get a comprehensive digital marketing audit and custom growth strategy.
+      </p>
+
+      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <Link
+          to="/contact"
+          className="text-lg px-8 py-4 rounded-md font-semibold bg-white text-black hover:bg-gray-200 transition-colors duration-200"
+        >
+          Get Proposal
+        </Link>
+        <a
+          href="https://wa.me/+91XXXXXXXXXX"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-lg px-8 py-4 rounded-md font-semibold border border-white text-white hover:bg-white hover:text-black transition-colors duration-200"
+        >
+          WhatsApp Us
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
     </>
   );
 };
