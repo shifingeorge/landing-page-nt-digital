@@ -5,17 +5,16 @@ export default {
     extend: {
       colors: {
         primary: {
-          50: '#ecfeff',
-          100: '#cffafe',
-          200: '#a5f3fc',
-          300: '#67e8f9',
-          400: '#22d3ee', // added so hover:bg-primary-400 exists
-          500: '#22d3ee', // keeping your original choice
-          600: '#06b6d4',
-          700: '#0891b2',
-          800: '#0e7490',
-          900: '#164e63',
-          950: '#083344',
+          50: '#e0faff',
+          100: '#b3f3ff',
+          200: '#80ebff',
+          300: '#4de3ff',
+          400: '#1adcff',
+          500: '#00c4ff', // bright ocean blue
+          600: '#009ccc',
+          700: '#007399',
+          800: '#004a66',
+          900: '#002233',
         },
         secondary: {
           500: '#8b5cf6',
@@ -41,7 +40,7 @@ export default {
         },
       },
       fontFamily: {
-        heading: ['Space Grotesk', 'system-ui', 'sans-serif'],
+        heading: ['Space Grotesk', 'system-ui','syne', 'sans-serif'],
         body: ['Inter', 'system-ui', 'sans-serif'],
       },
       maxWidth: {
