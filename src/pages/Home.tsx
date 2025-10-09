@@ -1,6 +1,7 @@
 //import React from 'react';
+import heroimg from '../assets/hero.png';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Search, PenTool, Code, Megaphone, Film, Star, MapPin, Clock } from 'lucide-react';
+import { ArrowRight, Search, PenTool, Code, Megaphone, Film, MapPin, Clock } from 'lucide-react';
 
 const Home = () => {
   const services = [
@@ -124,7 +125,7 @@ const Home = () => {
   {/* Image */}
   <div className="relative mt-8 px-6 md:px-12">
     <img
-      src="/src/assets/hero.png"
+      src={heroimg}
       alt="Digital marketing team working"
       className="w-full h-auto rounded-2xl shadow-xl shadow-gray-400/50"
       loading="lazy"
