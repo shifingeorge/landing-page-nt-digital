@@ -1,0 +1,343 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Search, PenTool, Code, Megaphone, Film, CheckCircle, Star, MapPin, Clock } from 'lucide-react';
+
+const Home = () => {
+  const services = [
+    {
+      id: 'seo',
+      icon: Search,
+      title: 'SEO Services in Kochi',
+      description: 'On-page, technical, local SEO, authority building.',
+      href: '/services#seo'
+    },
+    {
+      id: 'content',
+      icon: PenTool,
+      title: 'Content Writing',
+      description: 'Web copy, blogs, ad copy, Malayalam content.',
+      href: '/services#content'
+    },
+    {
+      id: 'web',
+      icon: Code,
+      title: 'Website Development in Kochi',
+      description: 'Fast, secure, SEO-first sites.',
+      href: '/services#web'
+    },
+    {
+      id: 'ads',
+      icon: Megaphone,
+      title: 'Meta Ads (Facebook/Instagram)',
+      description: 'Full-funnel creatives and optimization.',
+      href: '/services#ads'
+    },
+    {
+      id: 'movie',
+      icon: Film,
+      title: 'Movie Promotion in Kerala',
+      description: 'Digital buzz for trailers and theatrical runs.',
+      href: '/services#movie'
+    }
+  ];
+
+  const processSteps = [
+    {
+      step: '01',
+      title: 'Audit',
+      description: 'Complete analysis of your current digital presence'
+    },
+    {
+      step: '02',
+      title: 'Strategy',
+      description: 'Custom roadmap based on your goals and market'
+    },
+    {
+      step: '03',
+      title: 'Launch & Optimize',
+      description: 'Execute campaigns with continuous optimization'
+    },
+    {
+      step: '04',
+      title: 'Scale',
+      description: 'Amplify what works and expand your reach'
+    }
+  ];
+
+  const blogPosts = [
+    {
+      title: 'SEO in Kochi: How Local Brands Rank #1',
+      excerpt: 'Complete guide to local SEO strategies that work in Kerala markets.',
+      readTime: '5 min read',
+      category: 'SEO',
+      href: '/blog/seo-in-kochi-local-brands-rank-1'
+    },
+    {
+      title: 'Meta Ads in Kerala: Costs, ROAS Benchmarks, and Creative Tips',
+      excerpt: 'Everything you need to know about Facebook and Instagram advertising in Kerala.',
+      readTime: '7 min read',
+      category: 'Meta Ads',
+      href: '/blog/meta-ads-kerala-costs-roas-benchmarks'
+    },
+    {
+      title: 'Movie Promotion in Kerala: Digital Strategies That Fill Theatres',
+      excerpt: 'How Malayalam films use digital marketing to drive box office success.',
+      readTime: '6 min read',
+      category: 'Movie Promotion',
+      href: '/blog/movie-promotion-kerala-digital-strategies'
+    }
+  ];
+
+  return (
+    <>
+      {/* Hero Section */}
+      <section className="section-padding bg-gradient-to-b from-gray-950 via-gray-950 to-gray-900">
+        <div className="max-w-7xl mx-auto container-padding">
+          <div className="text-center max-w-4xl mx-auto animate-fade-in">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-gray-100 mb-6 text-balance">
+              Digital Marketing Agency in <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-secondary-500">Kochi, Kerala</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-4 font-medium">
+              SEO, Website Development, Meta Ads, Content & Movie Promotion.
+            </p>
+            <p className="text-gray-400 mb-8 text-lg">
+              Kochi-born. ROI-focused. Fast execution.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <Link to="/contact" className="btn-primary text-lg px-8 py-4">
+                Get Free Growth Audit
+              </Link>
+              <Link to="/services" className="btn-secondary text-lg px-8 py-4">
+                View Services
+              </Link>
+            </div>
+
+            {/* Trust Bar */}
+            <div className="flex items-center justify-center space-x-2 text-gray-400">
+              <Star className="w-5 h-5 text-yellow-500 fill-current" />
+              <span className="text-sm">Trusted by Kerala startups, SMEs & film producers</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="section-padding bg-gray-900">
+        <div className="max-w-7xl mx-auto container-padding">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-100 mb-4">
+              Our Services
+            </h2>
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+              Full-stack digital marketing solutions designed to grow your Kerala business
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {services.map((service) => {
+              const Icon = service.icon;
+              return (
+                <div key={service.id} className="card group hover:border-primary-500/50">
+                  <div className="flex items-center space-x-4 mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-xl flex items-center justify-center group-hover:shadow-lg group-hover:shadow-primary-500/25 transition-all duration-200">
+                      <Icon className="w-6 h-6 text-gray-950" />
+                    </div>
+                    <h3 className="font-heading font-semibold text-gray-100 text-lg">
+                      {service.title}
+                    </h3>
+                  </div>
+                  <p className="text-gray-400 mb-4">
+                    {service.description}
+                  </p>
+                  <Link 
+                    to={service.href}
+                    className="text-primary-500 hover:text-primary-400 font-medium flex items-center space-x-2 group-hover:space-x-3 transition-all duration-200"
+                  >
+                    <span>Learn more</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="text-center">
+            <Link to="/services" className="btn-secondary inline-flex items-center space-x-2">
+              <span>Explore all services</span>
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Outcomes Section */}
+      <section className="section-padding bg-gray-950">
+        <div className="max-w-7xl mx-auto container-padding">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-100 mb-4">
+              Proven Results
+            </h2>
+            <p className="text-gray-400 text-lg">
+              Real outcomes for Kerala businesses
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="text-4xl font-heading font-bold text-primary-500 mb-2">150+</div>
+              <div className="text-gray-400">Leads generated in 30 days</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-heading font-bold text-secondary-500 mb-2">65%</div>
+              <div className="text-gray-400">Lower cost per acquisition</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-heading font-bold text-success-500 mb-2">4x</div>
+              <div className="text-gray-400">Organic traffic growth</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="section-padding bg-gray-900">
+        <div className="max-w-7xl mx-auto container-padding">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-100 mb-4">
+              How We Work
+            </h2>
+            <p className="text-gray-400 text-lg">
+              Our proven 4-step process
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {processSteps.map((step, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <span className="text-gray-950 font-heading font-bold text-xl">
+                    {step.step}
+                  </span>
+                </div>
+                <h3 className="font-heading font-semibold text-gray-100 text-lg mb-2">
+                  {step.title}
+                </h3>
+                <p className="text-gray-400 text-sm">
+                  {step.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Local SEO Section */}
+      <section className="section-padding bg-gray-950">
+        <div className="max-w-7xl mx-auto container-padding">
+          <div className="card max-w-4xl mx-auto text-center">
+            <MapPin className="w-12 h-12 text-primary-500 mx-auto mb-4" />
+            <h2 className="text-2xl md:text-3xl font-heading font-bold text-gray-100 mb-4">
+              Based in Kochi
+            </h2>
+            <p className="text-gray-400 text-lg mb-6">
+              Serving Ernakulam, Kakkanad, Fort Kochi, Aluva, Thrissur, Calicut, Trivandrum, and across Kerala.
+            </p>
+            <div className="flex flex-wrap justify-center gap-3">
+              {['Kochi', 'Ernakulam', 'Kakkanad', 'Fort Kochi', 'Aluva', 'Thrissur'].map((location) => (
+                <span key={location} className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-sm">
+                  {location}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Blog Preview */}
+      <section className="section-padding bg-gray-900">
+        <div className="max-w-7xl mx-auto container-padding">
+          <div className="flex justify-between items-end mb-12">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-100 mb-4">
+                Latest Insights
+              </h2>
+              <p className="text-gray-400 text-lg">
+                Digital marketing strategies for Kerala businesses
+              </p>
+            </div>
+            <Link to="/blog" className="btn-secondary hidden md:inline-flex items-center space-x-2">
+              <span>View all posts</span>
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            {blogPosts.map((post, index) => (
+              <article key={index} className="card group">
+                <div className="flex items-center space-x-2 mb-3">
+                  <span className="bg-primary-500/10 text-primary-500 px-2 py-1 rounded text-xs font-medium">
+                    {post.category}
+                  </span>
+                  <span className="text-gray-500 text-xs flex items-center space-x-1">
+                    <Clock className="w-3 h-3" />
+                    <span>{post.readTime}</span>
+                  </span>
+                </div>
+                <h3 className="font-heading font-semibold text-gray-100 mb-3 group-hover:text-primary-500 transition-colors duration-200">
+                  <Link to={post.href}>
+                    {post.title}
+                  </Link>
+                </h3>
+                <p className="text-gray-400 text-sm mb-4">
+                  {post.excerpt}
+                </p>
+                <Link 
+                  to={post.href}
+                  className="text-primary-500 hover:text-primary-400 font-medium text-sm flex items-center space-x-2 group-hover:space-x-3 transition-all duration-200"
+                >
+                  <span>Read more</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </article>
+            ))}
+          </div>
+
+          <div className="text-center md:hidden">
+            <Link to="/blog" className="btn-secondary inline-flex items-center space-x-2">
+              <span>View all posts</span>
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="section-padding bg-gradient-to-b from-gray-950 to-gray-900">
+        <div className="max-w-7xl mx-auto container-padding text-center">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-100 mb-4">
+            Get a free audit in 24 hours
+          </h2>
+          <p className="text-gray-400 text-lg mb-8 max-w-2xl mx-auto">
+            Ready to grow your Kerala business? Get a comprehensive digital marketing audit and custom growth strategy.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/contact" className="btn-primary text-lg px-8 py-4">
+              Get Proposal
+            </Link>
+            <a 
+              href="https://wa.me/+91XXXXXXXXXX" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="btn-success text-lg px-8 py-4"
+            >
+              WhatsApp Us
+            </a>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
+
+export default Home;
