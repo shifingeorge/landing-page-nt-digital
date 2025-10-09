@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Search, Phone } from 'lucide-react';
+import { Menu, X, Search } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -47,17 +47,13 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden md:flex items-center space-x-4">
-            <a 
-              href="tel:+91XXXXXXXXXX" 
-              className="text-gray-300 hover:text-primary-500 transition-colors duration-200"
-              aria-label="Call us"
+          {/* Desktop CTA Button */}
+          <div className="hidden md:flex items-center">
+            <Link
+              to="/contact"
+              className="btn-primary"
             >
-              <Phone className="w-5 h-5" />
-            </a>
-            <Link to="/contact" className="btn-primary">
-              Get Free Audit
+              Contact Us
             </Link>
           </div>
 
@@ -93,7 +89,7 @@ const Header = () => {
                   onClick={() => setIsMenuOpen(false)}
                   className="btn-primary w-full text-center block"
                 >
-                  Get Free Audit
+                  Contact Us
                 </Link>
               </div>
             </nav>
