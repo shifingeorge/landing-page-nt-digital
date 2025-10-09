@@ -1,7 +1,7 @@
 //import React from 'react';
 import heroimg from '../assets/hero.png';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Search, PenTool, Code, Megaphone, Film, MapPin, Clock } from 'lucide-react';
+import { ArrowRight, Search, PenTool, Code, Megaphone, Film, MapPin, Clock,Users, PhoneCall } from 'lucide-react';
 
 const Home = () => {
   const services = [
@@ -91,96 +91,151 @@ const Home = () => {
 
   return (
     <>
-{/* Hero Section */}
-<section className="section-padding bg-white overflow-hidden">
-  <div className="max-w-7xl mx-auto container-padding">
-    <div className="text-center max-w-4xl mx-auto animate-fade-in">
-      {/* Headline */}
-      <h1 className="text-4xl md:text-5xl lg:text-6xl font-[Syne] font-bold text-black mb-6 text-balance">
-        We Grow Brands That Win Online.
-      </h1>
+    {/* Hero Section */}
+    <section className="section-padding bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto container-padding">
+        <div className="text-center max-w-4xl mx-auto animate-fade-in">
+          {/* Headline */}
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-[Syne] font-bold text-black mb-6 text-balance">
+            We Grow Brands That Win Online.
+          </h1>
+          
+          {/* Subheadline */}
+          <p className="text-xl md:text-2xl text-black/80 mb-8 font-thin">
+          From Meta & Google Ads to SEO and Social Media—our strategies put your business in front of the right people, at the right time.
+          </p>
 
-      {/* Subheadline */}
-      <p className="text-xl md:text-2xl text-black/80 mb-8 font-thin">
-        From Meta & Google Ads to SEO and Social Media—our strategies put your business in front of the right people, at the right time.
-      </p>
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <Link
+            to="/contact"
+            className="text-lg px-8 py-4 rounded-md font-semibold bg-black text-white hover:bg-gray-800 transition-colors duration-200"
+            >
+              Get Proposal
+            </Link>
 
-      <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-  <Link
-    to="/contact"
-    className="text-lg px-8 py-4 rounded-md font-semibold bg-black text-white hover:bg-gray-800 transition-colors duration-200"
-  >
-    Get Proposal
-  </Link>
-  <Link
-    to="/services"
-    className="text-lg px-8 py-4 rounded-md font-semibold border border-black text-black hover:bg-black hover:text-white transition-colors duration-200"
-  >
-    View Services
-  </Link>
-</div>
-    </div>
-  </div>
-
-  {/* Image */}
-  <div className="relative mt-8 px-6 md:px-12">
-    <img
-      src={heroimg}
-      alt="Digital marketing team working"
-      className="w-full h-auto rounded-2xl shadow-xl shadow-gray-400/50"
-      loading="lazy"
-    />
-  </div>
-</section>
-
-      {/* Services Section */}
-      <section className="section-padding bg-gray-900">
-        <div className="max-w-7xl mx-auto container-padding">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-100 mb-4">
-              Our Services
-            </h2>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              Full-stack digital marketing solutions designed to grow your Kerala business
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            {services.map((service) => {
-              const Icon = service.icon;
-              return (
-                <div key={service.id} className="card group hover:border-primary-500/50">
-                  <div className="flex items-center space-x-4 mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-xl flex items-center justify-center group-hover:shadow-lg group-hover:shadow-primary-500/25 transition-all duration-200">
-                      <Icon className="w-6 h-6 text-gray-950" />
-                    </div>
-                    <h3 className="font-heading font-semibold text-gray-100 text-lg">
-                      {service.title}
-                    </h3>
-                  </div>
-                  <p className="text-gray-400 mb-4">
-                    {service.description}
-                  </p>
-                  <Link 
-                    to={service.href}
-                    className="text-primary-500 hover:text-primary-400 font-medium flex items-center space-x-2 group-hover:space-x-3 transition-all duration-200"
-                  >
-                    <span>Learn more</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
-              );
-            })}
-          </div>
-
-          <div className="text-center">
-            <Link to="/services" className="btn-secondary inline-flex items-center space-x-2">
-              <span>Explore all services</span>
-              <ArrowRight className="w-5 h-5" />
+            <Link
+            to="/services"
+            className="text-lg px-8 py-4 rounded-md font-semibold border border-black text-black hover:bg-black hover:text-white transition-colors duration-200"
+            >
+              View Services
             </Link>
           </div>
         </div>
-      </section>
+      </div>
+
+      {/* Image */}
+      <div className="relative mt-8 px-6 md:px-12">
+        <img
+        src={heroimg}
+        alt="Digital marketing team working"
+        className="w-full h-auto rounded-2xl shadow-xl shadow-gray-400/50"
+        loading="lazy"
+      />
+      </div>
+    </section>
+
+    {/* Services Section */}
+<section className="section-padding bg-white">
+  <div className="max-w-7xl mx-auto container-padding">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl md:text-4xl font-[Syne] font-bold text-black mb-4">
+        Our Services
+      </h2>
+      <p className="text-black/80 text-lg max-w-2xl mx-auto">
+        Full‑stack digital marketing solutions designed to grow your business
+      </p>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+      {[
+        {
+          id: 'seo',
+          icon: Search,
+          title: 'SEO Services',
+          description:
+            'On‑page, local, and technical SEO built to improve visibility and drive qualified traffic.',
+          href: '/services#seo',
+        },
+        {
+          id: 'content',
+          icon: PenTool,
+          title: 'Content Writing',
+          description:
+            'High‑impact copy and blogs that connect with your audience and strengthen your brand voice.',
+          href: '/services#content',
+        },
+        {
+          id: 'web',
+          icon: Code,
+          title: 'Website Development',
+          description:
+            'Fast, modern, and SEO‑ready websites designed to convert visitors into customers.',
+          href: '/services#web',
+        },
+        {
+          id: 'ads',
+          icon: Megaphone,
+          title: 'Meta & Google Ads',
+          description:
+            'Strategic paid campaigns that attract the right customers and maximize ROI.',
+          href: '/services#ads',
+        },
+        {
+          id: 'targeted',
+          icon: Users,
+          title: 'Advertisement on Targeted Audience',
+          description:
+            'Reach potential customers precisely where they are with data‑driven audience targeting.',
+          href: '/services#targeted',
+        },
+        {
+          id: 'telecall',
+          icon: PhoneCall,
+          title: 'Telecall & Lead Closing',
+          description:
+            'Our team manages calls, nurtures leads, and helps you convert prospects into sales.',
+          href: '/services#telecall',
+        },
+      ].map((service) => {
+        const Icon = service.icon;
+        return (
+          <div
+            key={service.id}
+            className="p-6 bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition-all duration-200 group"
+          >
+            <div className="flex items-center space-x-4 mb-4">
+              <div className="w-12 h-12 bg-black rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform duration-200">
+                <Icon className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="font-[Syne] font-semibold text-black text-lg">
+                {service.title}
+              </h3>
+            </div>
+            <p className="text-black/70 mb-4">{service.description}</p>
+            <Link
+              to={service.href}
+              className="inline-flex items-center space-x-2 font-semibold text-black border-b border-black/20 hover:border-black transition-all duration-200"
+            >
+              <span>Learn more</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        );
+      })}
+    </div>
+
+    <div className="text-center">
+      <Link
+        to="/services"
+        className="px-8 py-4 text-lg font-semibold rounded-md border border-black text-black hover:bg-black hover:text-white transition-colors duration-200 inline-flex items-center space-x-2"
+      >
+        <span>Explore all services</span>
+        <ArrowRight className="w-5 h-5" />
+      </Link>
+    </div>
+  </div>
+</section>
 
       {/* Outcomes Section */}
       <section className="section-padding bg-gray-950">
