@@ -17,15 +17,15 @@ const Header = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="sticky top-0 z-50 bg-gray-950/95 backdrop-blur-sm border-b border-gray-800">
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
       <div className="max-w-7xl mx-auto container-padding">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
-            <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-lg flex items-center justify-center group-hover:shadow-lg group-hover:shadow-primary-500/25 transition-all duration-200">
-              <Search className="w-4 h-4 text-gray-950" />
+            <div className="w-8 h-8 bg-black rounded-lg flex items-center justify-center group-hover:shadow-md group-hover:shadow-gray-400/25 transition-all duration-200">
+              <Search className="w-4 h-4 text-white" />
             </div>
-            <span className="font-heading font-bold text-xl text-gray-100">
+            <span className="font-heading font-bold text-xl text-black">
               Nainas Digital World
             </span>
           </Link>
@@ -36,10 +36,10 @@ const Header = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`text-sm font-medium transition-colors duration-200 hover:text-primary-500 ${
-                  isActive(item.path) 
-                    ? 'text-primary-500 border-b border-primary-500 pb-1' 
-                    : 'text-gray-300'
+                className={`text-sm font-medium transition-colors duration-200 ${
+                  isActive(item.path)
+                    ? 'text-black border-b border-black pb-1'
+                    : 'text-gray-700 hover:text-black'
                 }`}
               >
                 {item.label}
@@ -51,7 +51,7 @@ const Header = () => {
           <div className="hidden md:flex items-center">
             <Link
               to="/contact"
-              className="btn-primary"
+              className="text-sm font-semibold px-5 py-2 rounded-md bg-black text-white hover:bg-gray-800 transition-colors duration-200"
             >
               Contact Us
             </Link>
@@ -60,7 +60,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden text-gray-300 hover:text-gray-100 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-gray-950 rounded-lg p-2"
+            className="md:hidden text-black hover:text-gray-800 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 rounded-lg p-2"
             aria-label="Toggle menu"
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -69,25 +69,27 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-800 animate-fade-in">
+          <div className="md:hidden py-4 border-t border-gray-200 animate-fade-in bg-white">
             <nav className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <Link
                   key={item.path}
                   to={item.path}
                   onClick={() => setIsMenuOpen(false)}
-                  className={`text-sm font-medium transition-colors duration-200 hover:text-primary-500 ${
-                    isActive(item.path) ? 'text-primary-500' : 'text-gray-300'
+                  className={`text-sm font-medium transition-colors duration-200 ${
+                    isActive(item.path)
+                      ? 'text-black'
+                      : 'text-gray-700 hover:text-black'
                   }`}
                 >
                   {item.label}
                 </Link>
               ))}
-              <div className="pt-4 border-t border-gray-800">
-                <Link 
-                  to="/contact" 
+              <div className="pt-4 border-t border-gray-200">
+                <Link
+                  to="/contact"
                   onClick={() => setIsMenuOpen(false)}
-                  className="btn-primary w-full text-center block"
+                  className="block w-full text-center text-sm font-semibold px-5 py-2 rounded-md bg-black text-white hover:bg-gray-800 transition-colors duration-200"
                 >
                   Contact Us
                 </Link>
