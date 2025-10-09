@@ -1,6 +1,6 @@
-import React from 'react';
+//import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Search, PenTool, Code, Megaphone, Film, CheckCircle, Star, MapPin, Clock } from 'lucide-react';
+import { ArrowRight, Search, PenTool, Code, Megaphone, Film, Star, MapPin, Clock } from 'lucide-react';
 
 const Home = () => {
   const services = [
@@ -91,36 +91,36 @@ const Home = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="section-padding bg-gradient-to-b from-gray-950 via-gray-950 to-gray-900">
-        <div className="max-w-7xl mx-auto container-padding">
-          <div className="text-center max-w-4xl mx-auto animate-fade-in">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-gray-100 mb-6 text-balance">
-              Digital Marketing Agency in <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-secondary-500">Kochi, Kerala</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-4 font-medium">
-              SEO, Website Development, Meta Ads, Content & Movie Promotion.
-            </p>
-            <p className="text-gray-400 mb-8 text-lg">
-              Kochi-born. ROI-focused. Fast execution.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link to="/contact" className="btn-primary text-lg px-8 py-4">
-                Get Free Growth Audit
-              </Link>
-              <Link to="/services" className="btn-secondary text-lg px-8 py-4">
-                View Services
-              </Link>
-            </div>
+<section className="section-padding bg-gradient-to-b from-gray-950 via-gray-950 to-gray-900">
+  <div className="max-w-7xl mx-auto container-padding">
+    <div className="text-center max-w-4xl mx-auto animate-fade-in">
+      {/* Updated Headline */}
+      <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-gray-100 mb-6 text-balance">
+        We Grow Brands That <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-secondary-500">Win Online.</span>
+      </h1>
 
-            {/* Trust Bar */}
-            <div className="flex items-center justify-center space-x-2 text-gray-400">
-              <Star className="w-5 h-5 text-yellow-500 fill-current" />
-              <span className="text-sm">Trusted by Kerala startups, SMEs & film producers</span>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Updated Subheadline */}
+      <p className="text-xl md:text-2xl text-gray-300 mb-8 font-medium">
+        From Meta & Google Ads to SEO and Social Media—our strategies put your business in front of the right people, at the right time.
+      </p>
+
+      <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+        <Link to="/contact" className="btn-primary text-lg px-8 py-4">
+          Contact Us Now
+        </Link>
+        <Link to="/services" className="btn-secondary text-lg px-8 py-4">
+          View Services
+        </Link>
+      </div>
+
+      {/* Updated Trust Bar */}
+      <div className="flex items-center justify-center space-x-2 text-gray-400">
+        <Star className="w-5 h-5 text-yellow-500 fill-current" />
+        <span className="text-sm">Trusted Kerala's local stores</span>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Services Section */}
       <section className="section-padding bg-gray-900">
