@@ -13,7 +13,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="min-h-screen bg-gray-950 text-gray-100">
+      <div className="overflow-x-hidden min-h-screen bg-gray-950 text-gray-100">
         <Header />
         <main>
           <Routes>

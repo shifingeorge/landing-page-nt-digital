@@ -9,19 +9,21 @@
   
   body {
     font-family: 'Inter', system-ui, sans-serif;
-    background-color: theme(colors.gray.950);
-    color: theme(colors.gray.100);
+    overflow-x: hidden;
+    width: 100%;
+    background-color: #0a0a0a; /* Replace with the actual hex value for gray.950 from your Tailwind config */
+    color: #f3f4f6; /* gray-100 */
   }
   
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Space Grotesk', system-ui, sans-serif;
-    line-height: theme(lineHeight.heading);
+    @apply leading-tight;
     font-weight: 600;
   }
   
   p {
     max-width: 65ch;
-    line-height: theme(lineHeight.body);
+    @apply leading-normal;
   }
 }
 
@@ -61,16 +63,16 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: theme(colors.gray.900);
+  background: #111827; /* gray-900 */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: theme(colors.gray.700);
+  background: #374151; /* gray-700 */
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: theme(colors.gray.600);
+  background: #4b5563; /* gray-600 */
 }
 
 /* Focus styles for accessibility */
