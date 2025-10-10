@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import {
-  Search,
   Facebook,
   Instagram,
   Linkedin,
@@ -9,6 +8,9 @@ import {
   Phone,
   Mail,
 } from 'lucide-react';
+
+// import the white logo SVG
+import NTLogoWhite from '../assets/NT Logo White.svg';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -56,13 +58,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Brand & Info */}
           <div className="lg:col-span-2">
-            <Link to="/" className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
-                <Search className="w-4 h-4 text-black" />
-              </div>
-              <span className="font-[Syne] font-bold text-xl text-white">
-                Nainas Digital World
-              </span>
+            <Link to="/" className="flex items-center space-x-3 mb-4">
+              <img
+                src={NTLogoWhite}
+                alt="Nainas Digital World Logo"
+                className="h-12 w-auto object-contain"
+              />
+              <span className="sr-only">Nainas Digital World</span>
             </Link>
 
             <p className="text-gray-400 mb-6 max-w-md">
