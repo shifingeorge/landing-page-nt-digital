@@ -1,7 +1,29 @@
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Search, PenTool, Code, Megaphone, Users, PhoneCall, ArrowRight, CheckCircle, HelpCircle } from 'lucide-react';
 
 const Services = () => {
+   const location = useLocation();
+
+  useEffect(() => {
+    // if there's a hash (like #seo), scroll smoothly to that section after mount
+    if (location.hash) {
+      const el = document.querySelector(location.hash);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const yOffset = -160; // adjust this number to match your header height
+        const y =
+          el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    } else {
+      // otherwise scroll to top when no hash
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, [location]);
+
   const services = [
     {
       id: 'seo',
