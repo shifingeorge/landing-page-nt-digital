@@ -1,7 +1,7 @@
 //import React from 'react';
 import heroimg from '../assets/hero.png';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Search, PenTool, Code, Megaphone, Film, MapPin, Clock,Users, PhoneCall } from 'lucide-react';
+import { ArrowRight, Search, PenTool, Code, Megaphone, Film, Clock,Users, PhoneCall } from 'lucide-react';
 
 const Home = () => {
   const Services = [
@@ -370,29 +370,6 @@ const Home = () => {
   </div>
 </section>
 
-      {/* Local SEO Section */}
-      <section className="section-padding bg-gray-950">
-        <div className="max-w-7xl mx-auto container-padding">
-          <div className="card max-w-4xl mx-auto text-center">
-            <MapPin className="w-12 h-12 text-primary-500 mx-auto mb-4" />
-            <h2 className="text-2xl md:text-3xl font-heading font-bold text-gray-100 mb-4">
-              Based in Kochi
-            </h2>
-            <p className="text-gray-400 text-lg mb-6">
-              Serving Ernakulam, Kakkanad, Fort Kochi, Aluva, Thrissur, Calicut, Trivandrum, and across Kerala.
-            </p>
-            <div className="flex flex-wrap justify-center gap-3">
-              {['Kochi', 'Ernakulam', 'Kakkanad', 'Fort Kochi', 'Aluva', 'Thrissur'].map((location) => (
-                <span key={location} className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-sm">
-                  {location}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      
 
       {/* Final CTA */}
 <section className="section-padding bg-white">
