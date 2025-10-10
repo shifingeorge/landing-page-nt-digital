@@ -1,4 +1,5 @@
-import React from 'react';
+//import React from 'react';
+import ScrollToTop from './components/ScrollToTop';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -11,6 +12,7 @@ import Contact from './pages/Contact';
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen bg-gray-950 text-gray-100">
         <Header />
         <main>
