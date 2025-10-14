@@ -10,7 +10,7 @@ import {
 } from 'lucide-react';
 
 // import the white logo SVG
-import NTLogoWhite from '../assets/NT Logo White.svg';
+import NTLogoWhite from '../assets/NT Logo Black.svg';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
