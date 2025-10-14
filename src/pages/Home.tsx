@@ -92,48 +92,48 @@ const Home = () => {
   return (
     <>
     {/* Hero Section */}
-    <section className="section-padding bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto container-padding">
-        <div className="text-center max-w-4xl mx-auto animate-fade-in">
-          {/* Headline */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-[Syne] font-bold text-black mb-6 text-balance">
-            We Grow Brands That Win Online.
-          </h1>
+<section className="section-padding bg-gray-900 overflow-hidden">
+  <div className="max-w-7xl mx-auto container-padding">
+    <div className="text-center max-w-4xl mx-auto animate-fade-in">
+      {/* Headline */}
+      <h1 className="text-4xl md:text-5xl lg:text-6xl font-[Syne] font-bold text-white mb-6 text-balance">
+        We Grow Brands That Win Online.
+      </h1>
           
-          {/* Subheadline */}
-          <p className="text-xl md:text-2xl text-black/80 mb-8 font-thin">
-          From Meta & Google Ads to SEO and Social Media—our strategies put your business in front of the right people, at the right time.
-          </p>
+      {/* Subheadline */}
+      <p className="text-xl md:text-2xl text-gray-300 mb-8 font-thin">
+        From Meta & Google Ads to SEO and Social Media—our strategies put your business in front of the right people, at the right time.
+      </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link
-            to="/contact"
-            className="text-lg px-8 py-4 rounded-md font-semibold bg-black text-white hover:bg-gray-800 transition-colors duration-200"
-            >
-              Get Proposal
-            </Link>
+      {/* CTA Buttons */}
+      <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+        <Link
+          to="/contact"
+          className="text-lg px-8 py-4 rounded-md font-semibold bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200"
+        >
+          Get Proposal
+        </Link>
 
-            <Link
-            to="/services"
-            className="text-lg px-8 py-4 rounded-md font-semibold border border-black text-black hover:bg-black hover:text-white transition-colors duration-200"
-            >
-              View Services
-            </Link>
-          </div>
-        </div>
+        <Link
+          to="/services"
+          className="text-lg px-8 py-4 rounded-md font-semibold border border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-white transition-colors duration-200"
+        >
+          View Services
+        </Link>
       </div>
+    </div>
+  </div>
 
-      {/* Image */}
-      <div className="relative mt-8 px-6 md:px-12">
-        <img
-        src={heroimg}
-        alt="Digital marketing team working"
-        className="w-full h-auto rounded-2xl shadow-xl shadow-gray-400/50"
-        loading="lazy"
-      />
-      </div>
-    </section>
+  {/* Image */}
+  <div className="relative mt-8 px-6 md:px-12">
+    <img
+      src={heroimg}
+      alt="Digital marketing team working"
+      className="w-full h-auto rounded-2xl shadow-xl shadow-black/40"
+      loading="lazy"
+    />
+  </div>
+</section>
 
     {/* Services Section */}
     <section className="section-padding bg-white">
