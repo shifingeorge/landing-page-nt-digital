@@ -4,43 +4,46 @@ export default {
   theme: {
     extend: {
       colors: {
+        // 🔸 Brand palette
         primary: {
-          50: '#e0faff',
-          100: '#b3f3ff',
-          200: '#80ebff',
-          300: '#4de3ff',
-          400: '#1adcff',
-          500: '#00c4ff', // bright ocean blue
-          600: '#009ccc',
-          700: '#007399',
-          800: '#004a66',
-          900: '#002233',
+          DEFAULT: '#FF4500',
+          50: '#FFEDEA',
+          100: '#FFD9D1',
+          200: '#FFBFB0',
+          300: '#FF986B',
+          400: '#FF7033',
+          500: '#FF4500', // main CTA
+          600: '#E03D00',
+          700: '#B93100',
+          800: '#8F2700',
+          900: '#611A00',
         },
         secondary: {
-          500: '#8b5cf6',
-          600: '#7c3aed',
-          700: '#6d28d9',
+          500: '#FF7043',
+          600: '#F25C27',
+          700: '#CC4714',
         },
         success: {
           500: '#10b981',
           600: '#059669',
         },
         gray: {
-          950: '#0B0D0F',
-          900: '#12151C',
-          800: '#1E232B',
-          700: '#374151',
-          600: '#4b5563',
-          500: '#6b7280',
-          400: '#9aa0a6',
-          300: '#d1d5db',
-          200: '#e5e7eb',
-          100: '#f3f4f6',
-          50: '#f9fafb',
+          950: '#0E0E0E',
+          900: '#181818', // new background
+          800: '#1F1F1F',
+          700: '#2A2A2A',
+          600: '#3D3D3D',
+          500: '#6B6B6B',
+          400: '#9E9E9E',
+          300: '#CFCFCF',
+          200: '#E4E4E4',
+          100: '#F3F3F3',
+          50: '#FAFAFA',
         },
       },
+
       fontFamily: {
-        heading: ['Space Grotesk', 'system-ui','syne', 'sans-serif'],
+        heading: ['Syne', 'system-ui', 'sans-serif'],
         body: ['Inter', 'system-ui', 'sans-serif'],
       },
       maxWidth: {
@@ -50,6 +53,7 @@ export default {
         heading: '1.2',
         body: '1.5',
       },
+
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-up': 'slideUp 0.6s ease-out',
@@ -65,8 +69,14 @@ export default {
           '100%': { transform: 'translateY(0)', opacity: '1' },
         },
         glow: {
-          '0%': { boxShadow: '0 0 5px #22d3ee, 0 0 10px #22d3ee, 0 0 15px #22d3ee' },
-          '100%': { boxShadow: '0 0 10px #22d3ee, 0 0 20px #22d3ee, 0 0 30px #22d3ee' },
+          '0%': {
+            boxShadow:
+              '0 0 5px #FF4500, 0 0 10px #FF4500, 0 0 15px #FF4500',
+          },
+          '100%': {
+            boxShadow:
+              '0 0 10px #FF4500, 0 0 20px #FF4500, 0 0 30px #FF4500',
+          },
         },
       },
     },
