@@ -307,20 +307,20 @@ const Home = () => {
 </section>
 
 {/* Blog Preview */}
-<section className="section-padding bg-white">
+<section className="section-padding bg-gray-900">
   <div className="max-w-7xl mx-auto container-padding">
     <div className="flex justify-between items-end mb-12">
       <div>
-        <h2 className="text-3xl md:text-4xl font-[Syne] font-bold text-black mb-4">
+        <h2 className="text-3xl md:text-4xl font-[Syne] font-bold text-white mb-4">
           Latest Insights
         </h2>
-        <p className="text-black/70 text-lg">
+        <p className="text-gray-300 text-lg">
           Digital marketing strategies for Kerala businesses
         </p>
       </div>
       <Link
         to="/blog"
-        className="hidden md:inline-flex items-center space-x-2 px-8 py-3 font-semibold rounded-md border border-black text-black hover:bg-black hover:text-white transition-colors duration-200"
+        className="hidden md:inline-flex items-center space-x-2 px-8 py-3 font-semibold rounded-md border border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-white transition-colors duration-200"
       >
         <span>View all posts</span>
         <ArrowRight className="w-5 h-5" />
@@ -331,26 +331,30 @@ const Home = () => {
       {blogPosts.map((post, index) => (
         <article
           key={index}
-          className="p-6 border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition-all duration-200 group bg-white"
+          className="p-6 border border-gray-700 rounded-2xl shadow-sm hover:shadow-md transition-all duration-200 group bg-gray-800"
         >
           <div className="flex items-center space-x-2 mb-3">
-            <span className="bg-black/5 text-black/70 px-2 py-1 rounded text-xs font-medium">
+            <span className="bg-primary-500/10 text-primary-500 px-2 py-1 rounded text-xs font-medium">
               {post.category}
             </span>
-            <span className="text-black/50 text-xs flex items-center space-x-1">
+            <span className="text-gray-400 text-xs flex items-center space-x-1">
               <Clock className="w-3 h-3" />
               <span>{post.readTime}</span>
             </span>
           </div>
-          <h3 className="font-[Syne] font-semibold text-black mb-3 group-hover:text-gray-700 transition-colors duration-200">
+          <h3 className="font-[Syne] font-semibold text-white mb-3 group-hover:text-primary-500 transition-colors duration-200">
             <Link to={post.href}>{post.title}</Link>
           </h3>
-          <p className="text-black/70 text-sm mb-4">{post.excerpt}</p>
+          <p className="text-gray-300 text-sm mb-4">{post.excerpt}</p>
+
+          {/* Short underline only under link text */}
           <Link
             to={post.href}
-            className="font-semibold text-black text-sm flex items-center space-x-2 border-b border-black/10 hover:border-black/60 transition-all duration-200 group-hover:space-x-3"
+            className="inline-flex items-center space-x-2 font-semibold text-primary-500 text-sm hover:text-primary-400 transition-all duration-200 group-hover:space-x-3"
           >
-            <span>Read more</span>
+            <span className="relative after:absolute after:left-0 after:-bottom-0.5 after:h-[2px] after:w-full after:bg-current after:transition-transform after:scale-x-100 group-hover:after:scale-x-100">
+              Read more
+            </span>
             <ArrowRight className="w-4 h-4" />
           </Link>
         </article>
@@ -360,7 +364,7 @@ const Home = () => {
     <div className="text-center md:hidden">
       <Link
         to="/blog"
-        className="px-8 py-3 font-semibold rounded-md border border-black text-black hover:bg-black hover:text-white transition-colors duration-200 inline-flex items-center space-x-2"
+        className="px-8 py-3 font-semibold rounded-md border border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-white transition-colors duration-200 inline-flex items-center space-x-2"
       >
         <span>View all posts</span>
         <ArrowRight className="w-5 h-5" />
