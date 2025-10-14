@@ -275,29 +275,29 @@ const Home = () => {
 </section>
 
       {/* Process Section */}
-<section className="section-padding bg-white">
+<section className="section-padding bg-gray-900">
   <div className="max-w-7xl mx-auto container-padding">
     <div className="text-center mb-16">
-      <h2 className="text-3xl md:text-4xl font-[Syne] font-bold text-black mb-4">
-        How We Work
+      <h2 className="text-3xl md:text-4xl font-[Syne] font-bold text-white mb-4">
+        How We Work
       </h2>
-      <p className="text-black/70 text-lg max-w-xl mx-auto">
-        Our proven 4‑step process
+      <p className="text-gray-300 text-lg max-w-xl mx-auto">
+        Our proven 4‑step process
       </p>
     </div>
 
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       {processSteps.map((step, index) => (
         <div key={index} className="text-center">
-          <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+          <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
             <span className="text-white font-[Syne] font-bold text-xl">
               {step.step}
             </span>
           </div>
-          <h3 className="font-[Syne] font-semibold text-black text-lg mb-2">
+          <h3 className="font-[Syne] font-semibold text-white text-lg mb-2">
             {step.title}
           </h3>
-          <p className="text-black/70 text-sm max-w-xs mx-auto">
+          <p className="text-gray-300 text-sm max-w-xs mx-auto">
             {step.description}
           </p>
         </div>
