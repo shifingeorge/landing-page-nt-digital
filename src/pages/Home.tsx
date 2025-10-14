@@ -239,10 +239,10 @@ const Home = () => {
 </section>
 
     {/* Outcomes Section */}
-<section className="section-padding bg-white">
+<section className="section-padding bg-gray-900">
   <div className="max-w-7xl mx-auto container-padding">
-    {/* Black panel */}
-    <div className="bg-black rounded-3xl p-10 md:p-16 text-center text-white shadow-xl">
+    {/* Panel */}
+    <div className="bg-gray-800 rounded-3xl p-10 md:p-16 text-center text-white shadow-xl">
       <h2 className="text-3xl md:text-4xl font-[Syne] font-bold mb-4">
         Proven Results
       </h2>
@@ -255,16 +255,16 @@ const Home = () => {
           <div className="text-4xl font-[Syne] font-bold text-primary-500 mb-2">
             150+
           </div>
-          <div className="text-gray-300">Leads generated in 30 days</div>
+          <div className="text-gray-300">Leads generated in 30 days</div>
         </div>
         <div className="text-center">
-          <div className="text-4xl font-[Syne] font-bold text-secondary-500 mb-2">
+          <div className="text-4xl font-[Syne] font-bold text-primary-500 mb-2">
             65%
           </div>
-          <div className="text-gray-300">Lower cost per acquisition</div>
+          <div className="text-gray-300">Lower cost per acquisition</div>
         </div>
         <div className="text-center">
-          <div className="text-4xl font-[Syne] font-bold text-success-500 mb-2">
+          <div className="text-4xl font-[Syne] font-bold text-primary-500 mb-2">
             4×
           </div>
           <div className="text-gray-300">Organic traffic growth</div>
