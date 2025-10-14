@@ -20,10 +20,10 @@ const Header = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
+    <header className="sticky top-0 z-50 bg-gray-900/95 backdrop-blur-sm border-b border-gray-800">
       <div className="max-w-7xl mx-auto container-padding">
         <div className="flex items-center justify-between h-16">
-          {/* NT Logo */}
+          {/* Logo */}
           <Link to="/" className="flex items-center">
             <img
               src={NTLogoBlack}
@@ -40,8 +40,8 @@ const Header = () => {
                 to={item.path}
                 className={`text-sm font-medium transition-colors duration-200 ${
                   isActive(item.path)
-                    ? 'text-black border-b border-black pb-1'
-                    : 'text-gray-700 hover:text-black'
+                    ? 'text-primary-500 border-b border-primary-500 pb-1'
+                    : 'text-gray-300 hover:text-white'
                 }`}
               >
                 {item.label}
@@ -53,7 +53,7 @@ const Header = () => {
           <div className="hidden md:flex items-center">
             <Link
               to="/contact"
-              className="text-sm font-semibold px-5 py-2 rounded-md bg-black text-white hover:bg-gray-800 transition-colors duration-200"
+              className="text-sm font-semibold px-5 py-2 rounded-md bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200"
             >
               Contact Us
             </Link>
@@ -62,7 +62,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden text-black hover:text-gray-800 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 rounded-lg p-2"
+            className="md:hidden text-gray-200 hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-lg p-2"
             aria-label="Toggle menu"
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -71,7 +71,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200 animate-fade-in bg-white">
+          <div className="md:hidden py-4 border-t border-gray-800 animate-fade-in bg-gray-900">
             <nav className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <Link
@@ -80,18 +80,18 @@ const Header = () => {
                   onClick={() => setIsMenuOpen(false)}
                   className={`text-sm font-medium transition-colors duration-200 ${
                     isActive(item.path)
-                      ? 'text-black'
-                      : 'text-gray-700 hover:text-black'
+                      ? 'text-primary-500'
+                      : 'text-gray-300 hover:text-white'
                   }`}
                 >
                   {item.label}
                 </Link>
               ))}
-              <div className="pt-4 border-t border-gray-200">
+              <div className="pt-4 border-t border-gray-800">
                 <Link
                   to="/contact"
                   onClick={() => setIsMenuOpen(false)}
-                  className="block w-full text-center text-sm font-semibold px-5 py-2 rounded-md bg-black text-white hover:bg-gray-800 transition-colors duration-200"
+                  className="block w-full text-center text-sm font-semibold px-5 py-2 rounded-md bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200"
                 >
                   Contact Us
                 </Link>

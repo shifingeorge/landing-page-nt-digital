@@ -136,108 +136,107 @@ const Home = () => {
 </section>
 
     {/* Services Section */}
-    <section className="section-padding bg-white">
-      <div className="max-w-7xl mx-auto container-padding">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-[Syne] font-bold text-black mb-4">
-            Our Services
-          </h2>
+<section className="section-padding bg-gray-900">
+  <div className="max-w-7xl mx-auto container-padding">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl md:text-4xl font-[Syne] font-bold text-white mb-4">
+        Our Services
+      </h2>
 
-          <p className="text-black/80 text-lg max-w-2xl mx-auto">
-          Full‑stack digital marketing solutions designed to grow your business
-          </p>
+      <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+        Full‑stack digital marketing solutions designed to grow your business
+      </p>
+    </div>
 
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {[
-            {
-              id: 'seo',
-              icon: Search,
-              title: 'SEO Services',
-              description:
-              'On‑page, local, and technical SEO built to improve visibility and drive qualified traffic.',
-              href: '/services#seo',
-            },
-            {
-              id: 'content',
-              icon: PenTool,
-              title: 'Content Writing',
-              description:
-              'High‑impact copy and blogs that connect with your audience and strengthen your brand voice.',
-              href: '/services#content',
-            },
-            {
-              id: 'web',
-              icon: Code,
-              title: 'Website Development',
-              description:
-              'Fast, modern, and SEO‑ready websites designed to convert visitors into customers.',
-              href: '/services#web',
-            },
-            {
-              id: 'ads',
-              icon: Megaphone,
-              title: 'Meta & Google Ads',
-              description:
-              'Strategic paid campaigns that attract the right customers and maximize ROI.',
-              href: '/services#ads',
-            },
-            {
-              id: 'targeted',
-              icon: Users,
-              title: 'Advertisement on Targeted Audience',
-              description:
-              'Reach potential customers precisely where they are with data‑driven audience targeting.',
-              href: '/services#targeted',
-            },
-            {
-              id: 'telecall',
-              icon: PhoneCall,
-              title: 'Telecall & Lead Closing',
-              description:
-              'Our team manages calls, nurtures leads, and helps you convert prospects into sales.',
-              href: '/services#telecall',
-            },
-
-            ].map((Services) => {
-              const Icon = Services.icon;
-              return (
-                <div
-                key={Services.id}
-                className="p-6 bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition-all duration-200 group"
-                >
-                  <div className="flex items-center space-x-4 mb-4">
-                    <div className="w-12 h-12 bg-black rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform duration-200">
-                      <Icon className="w-6 h-6 text-white" />
-                      </div>
-                      <h3 className="font-[Syne] font-semibold text-black text-lg">
-                        {Services.title}
-                      </h3>
-                    </div>
-                    <p className="text-black/70 mb-4">{Services.description}</p>
-                    <Link
-                    to={Services.href}
-                    className="inline-flex items-center space-x-2 font-semibold text-black border-b border-black/20 hover:border-black transition-all duration-200"
-                    >
-                      <span>Learn more</span>
-                      <ArrowRight className="w-4 h-4" />
-                      </Link>
-                  </div>
-                );
-              })}
-        </div>
-
-        <div className="text-center">
-          <Link
-          to="/services"
-          className="px-8 py-4 text-lg font-semibold rounded-md border border-black text-black hover:bg-black hover:text-white transition-colors duration-200 inline-flex items-center space-x-2"
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+      {[
+        {
+          id: 'seo',
+          icon: Search,
+          title: 'SEO Services',
+          description:
+            'On‑page, local, and technical SEO built to improve visibility and drive qualified traffic.',
+          href: '/services#seo',
+        },
+        {
+          id: 'content',
+          icon: PenTool,
+          title: 'Content Writing',
+          description:
+            'High‑impact copy and blogs that connect with your audience and strengthen your brand voice.',
+          href: '/services#content',
+        },
+        {
+          id: 'web',
+          icon: Code,
+          title: 'Website Development',
+          description:
+            'Fast, modern, and SEO‑ready websites designed to convert visitors into customers.',
+          href: '/services#web',
+        },
+        {
+          id: 'ads',
+          icon: Megaphone,
+          title: 'Meta & Google Ads',
+          description:
+            'Strategic paid campaigns that attract the right customers and maximize ROI.',
+          href: '/services#ads',
+        },
+        {
+          id: 'targeted',
+          icon: Users,
+          title: 'Advertisement on Targeted Audience',
+          description:
+            'Reach potential customers precisely where they are with data‑driven audience targeting.',
+          href: '/services#targeted',
+        },
+        {
+          id: 'telecall',
+          icon: PhoneCall,
+          title: 'Telecall & Lead Closing',
+          description:
+            'Our team manages calls, nurtures leads, and helps you convert prospects into sales.',
+          href: '/services#telecall',
+        },
+      ].map((Services) => {
+        const Icon = Services.icon;
+        return (
+          <div
+            key={Services.id}
+            className="p-6 bg-gray-800 border border-gray-700 rounded-2xl shadow-sm hover:shadow-md transition-all duration-200 group"
           >
-            <span>Explore all services</span>
-            <ArrowRight className="w-5 h-5" />
+            <div className="flex items-center space-x-4 mb-4">
+              <div className="w-12 h-12 bg-primary-500 rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform duration-200">
+                <Icon className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="font-[Syne] font-semibold text-white text-lg">
+                {Services.title}
+              </h3>
+            </div>
+            <p className="text-gray-300 mb-4">{Services.description}</p>
+            <Link
+              to={Services.href}
+              className="inline-flex items-center space-x-2 font-semibold text-primary-500 border-b border-primary-500/30 hover:border-primary-500 transition-all duration-200"
+            >
+              <span>Learn more</span>
+              <ArrowRight className="w-4 h-4" />
             </Link>
-        </div>
-        </div>
-    </section>
+          </div>
+        );
+      })}
+    </div>
+
+    <div className="text-center">
+      <Link
+        to="/services"
+        className="px-8 py-4 text-lg font-semibold rounded-md border border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-white transition-colors duration-200 inline-flex items-center space-x-2"
+      >
+        <span>Explore all services</span>
+        <ArrowRight className="w-5 h-5" />
+      </Link>
+    </div>
+  </div>
+</section>
 
     {/* Outcomes Section */}
 <section className="section-padding bg-white">
