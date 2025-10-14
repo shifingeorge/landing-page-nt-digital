@@ -389,7 +389,7 @@ const Home = () => {
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <Link
           to="/contact"
-          className="text-lg px-8 py-4 rounded-md font-semibold bg-white text-black hover:bg-gray-200 transition-colors duration-200"
+          className="text-lg px-8 py-4 rounded-md font-semibold bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200"
         >
           Get Proposal
         </Link>
@@ -397,7 +397,7 @@ const Home = () => {
           href="https://wa.me/+91XXXXXXXXXX"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-lg px-8 py-4 rounded-md font-semibold border border-white text-white hover:bg-white hover:text-black transition-colors duration-200"
+          className="text-lg px-8 py-4 rounded-md font-semibold border border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-white transition-colors duration-200"
         >
           WhatsApp Us
         </a>
