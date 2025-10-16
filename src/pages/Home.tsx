@@ -375,10 +375,9 @@ const Home = () => {
 
 
       {/* Final CTA */}
-<section className="section-padding bg-white">
+<section className="section-padding bg-gray-900">
   <div className="max-w-7xl mx-auto container-padding text-center">
-    {/* Black rectangular box */}
-    <div className="bg-black rounded-3xl p-10 md:p-16 shadow-xl">
+    
       <h2 className="text-3xl md:text-4xl font-[Syne] font-bold text-white mb-4">
         Get a free audit in 24 hours
       </h2>
@@ -402,7 +401,6 @@ const Home = () => {
           WhatsApp Us
         </a>
       </div>
-    </div>
   </div>
 </section>  
     </>
