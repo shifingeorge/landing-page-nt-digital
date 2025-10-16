@@ -57,12 +57,15 @@ const Home = () => {
     {/* Hero Section */}
 <section className="section-padding bg-gray-900 overflow-hidden">
   <div className="max-w-7xl mx-auto container-padding">
-    <div className="text-center max-w-4xl mx-auto animate-fade-in">
+    <div className="max-w-4xl mx-auto text-center animate-fade-in">
+      
       {/* Headline */}
-      <h1 className="text-4xl md:text-5xl lg:text-6xl font-[Syne] font-bold text-white mb-6 text-balance">
-        We Grow Brands That Win Online.
+      <h1 className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-[Syne] font-bold text-white mb-6 leading-tight">
+        Beyond the Hype.&nbsp;Just Results.
+        <br />
+        Your Path to Digital Dominance.
       </h1>
-          
+
       {/* Subheadline */}
       <p className="text-xl md:text-2xl text-gray-300 mb-8 font-thin">
         From Meta & Google Ads to SEO and Social Media—our strategies put your business in front of the right people, at the right time.
