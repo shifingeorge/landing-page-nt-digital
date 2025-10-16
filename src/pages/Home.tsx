@@ -1,7 +1,7 @@
 //import React from 'react';
 import heroimg from '../assets/hero.png';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Search, PenTool, Code, Megaphone, Film, Clock,Users, PhoneCall } from 'lucide-react';
+import { ArrowRight, Search, PenTool, Code, Megaphone, Clock,Users, PhoneCall } from 'lucide-react';
 
 const Home = () => {
 
@@ -65,7 +65,7 @@ const Home = () => {
           
       {/* Subheadline */}
       <p className="mx-6 text-lg md:text-xl text-gray-300 mb-8 font-thin">
-        From Google Ads and Meta Ads to SEO and social media marketing, our digital marketing strategies put your business in front of the right audience at the right time.
+        From Google Ads and Meta Ads to SEO and social media marketing-our digital marketing strategies put your business in front of the right audience at the right time.
       </p>
       
 
@@ -108,7 +108,7 @@ const Home = () => {
       </h2>
 
       <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-        Full‑stack digital marketing solutions designed to grow your business
+        Full-stack digital marketing and SEO solutions powered by Google Ads, Meta Ads, and social media strategies — built to drive traffic, leads, and growth.
       </p>
     </div>
 
@@ -119,7 +119,7 @@ const Home = () => {
           icon: Search,
           title: 'SEO Services',
           description:
-            'On‑page, local, and technical SEO built to improve visibility and drive qualified traffic.',
+            'Grow your brand with on-page, local, and technical SEO that helps your business rank higher, reach more customers, and generate quality leads.',
           href: '/services#seo',
         },
         {
@@ -127,7 +127,7 @@ const Home = () => {
           icon: PenTool,
           title: 'Content Writing',
           description:
-            'High‑impact copy and blogs that connect with your audience and strengthen your brand voice.',
+            'High-impact content writing and SEO blogs that connect with your audience, build trust, and strengthen your brand voice.',
           href: '/services#content',
         },
         {
@@ -135,7 +135,7 @@ const Home = () => {
           icon: Code,
           title: 'Website Development',
           description:
-            'Fast, modern, and SEO‑ready websites designed to convert visitors into customers.',
+            'Fast, modern, and SEO-friendly websites designed to convert visitors into loyal customers and strengthen your online presence.',
           href: '/services#web',
         },
         {
@@ -143,7 +143,7 @@ const Home = () => {
           icon: Megaphone,
           title: 'Meta & Google Ads',
           description:
-            'Strategic paid campaigns that attract the right customers and maximize ROI.',
+            'Strategic Google Ads and Meta Ads campaigns designed to attract the right customers, generate quality leads, and maximize ROI.',
           href: '/services#ads',
         },
         {
@@ -151,7 +151,7 @@ const Home = () => {
           icon: Users,
           title: 'Advertisement on Targeted Audience',
           description:
-            'Reach potential customers precisely where they are with data‑driven audience targeting.',
+            'Advertise to the right audience using smart, data-driven campaigns that attract qualified leads and boost conversions.',
           href: '/services#targeted',
         },
         {
@@ -159,7 +159,7 @@ const Home = () => {
           icon: PhoneCall,
           title: 'Telecall & Lead Closing',
           description:
-            'Our team manages calls, nurtures leads, and helps you convert prospects into sales.',
+            'End-to-end telecalling and lead management services that ensure every lead is followed up, nurtured, and converted into a sale.',
           href: '/services#telecall',
         },
       ].map((Services) => {
