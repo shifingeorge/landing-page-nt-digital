@@ -59,27 +59,27 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white text-black">
+    <div className="min-h-screen bg-gray-900 text-white">
       {/* Hero */}
-      <section className="section-padding bg-white text-center">
+      <section className="section-padding bg-gray-900 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-[Syne] font-bold mb-6">
             Contact Nainas Digital World
           </h1>
-          <p className="text-xl md:text-2xl text-black/80 mb-8">
+          <p className="text-xl md:text-2xl text-gray-300 mb-8">
             Tell us your goals. Get a free growth audit within 24 hours.
           </p>
         </div>
       </section>
 
       {/* Form & Info */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-gray-900">
         <div className="max-w-7xl mx-auto container-padding">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Form */}
             <div className="lg:col-span-2">
-              <div className="p-6 border border-gray-200 rounded-2xl shadow-sm bg-white">
-                <h2 className="text-2xl font-[Syne] font-bold mb-6">
+              <div className="p-6 border border-gray-700 rounded-2xl shadow-sm bg-gray-800">
+                <h2 className="text-2xl font-[Syne] font-bold mb-6 text-white">
                   Get Your Free Growth Audit
                 </h2>
 
@@ -87,7 +87,7 @@ const Contact = () => {
                   {/* name / email */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-medium mb-2">
+                      <label className="block text-sm font-medium mb-2 text-gray-300">
                         Name *
                       </label>
                       <input
@@ -95,11 +95,11 @@ const Contact = () => {
                         required
                         value={formData.name}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-md focus:border-black focus:ring-1 focus:ring-black"
+                        className="w-full px-4 py-3 border border-gray-600 rounded-md bg-gray-900 text-white placeholder-gray-400 focus:border-primary-500 focus:ring-1 focus:ring-primary-500"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium mb-2">
+                      <label className="block text-sm font-medium mb-2 text-gray-300">
                         Email *
                       </label>
                       <input
@@ -108,7 +108,7 @@ const Contact = () => {
                         required
                         value={formData.email}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-md focus:border-black focus:ring-1 focus:ring-black"
+                        className="w-full px-4 py-3 border border-gray-600 rounded-md bg-gray-900 text-white placeholder-gray-400 focus:border-primary-500 focus:ring-1 focus:ring-primary-500"
                       />
                     </div>
                   </div>
@@ -116,7 +116,7 @@ const Contact = () => {
                   {/* phone / company */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-medium mb-2">
+                      <label className="block text-sm font-medium mb-2 text-gray-300">
                         Phone / WhatsApp *
                       </label>
                       <input
@@ -124,24 +124,24 @@ const Contact = () => {
                         required
                         value={formData.phone}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-md focus:border-black focus:ring-1 focus:ring-black"
+                        className="w-full px-4 py-3 border border-gray-600 rounded-md bg-gray-900 text-white placeholder-gray-400 focus:border-primary-500 focus:ring-1 focus:ring-primary-500"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium mb-2">
+                      <label className="block text-sm font-medium mb-2 text-gray-300">
                         Company
                       </label>
                       <input
                         name="company"
                         value={formData.company}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-md focus:border-black focus:ring-1 focus:ring-black"
+                        className="w-full px-4 py-3 border border-gray-600 rounded-md bg-gray-900 text-white placeholder-gray-400 focus:border-primary-500 focus:ring-1 focus:ring-primary-500"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium mb-2">
+                    <label className="block text-sm font-medium mb-2 text-gray-300">
                       Website URL
                     </label>
                     <input
@@ -150,26 +150,26 @@ const Contact = () => {
                       placeholder="https://"
                       value={formData.website}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:border-black focus:ring-1 focus:ring-black"
+                      className="w-full px-4 py-3 border border-gray-600 rounded-md bg-gray-900 text-white placeholder-gray-400 focus:border-primary-500 focus:ring-1 focus:ring-primary-500"
                     />
                   </div>
 
                   {/* Services */}
                   <div>
-                    <label className="block text-sm font-medium mb-3">
+                    <label className="block text-sm font-medium mb-3 text-gray-300">
                       Services Interested In (select all)
                     </label>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                       {serviceOptions.map((s) => (
                         <label
                           key={s}
-                          className="flex items-center space-x-3 cursor-pointer"
+                          className="flex items-center space-x-3 cursor-pointer text-gray-300"
                         >
                           <input
                             type="checkbox"
                             checked={formData.services.includes(s)}
                             onChange={() => handleServiceChange(s)}
-                            className="w-4 h-4 text-black border-gray-400 rounded focus:ring-black focus:ring-1"
+                            className="w-4 h-4 text-primary-500 border-gray-500 rounded focus:ring-primary-500 focus:ring-1"
                           />
                           <span className="text-sm">{s}</span>
                         </label>
@@ -179,14 +179,14 @@ const Contact = () => {
 
                   {/* Budget */}
                   <div>
-                    <label className="block text-sm font-medium mb-2">
+                    <label className="block text-sm font-medium mb-2 text-gray-300">
                       Monthly Budget Range
                     </label>
                     <select
                       name="budget"
                       value={formData.budget}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:border-black focus:ring-1 focus:ring-black"
+                      className="w-full px-4 py-3 border border-gray-600 rounded-md bg-gray-900 text-white focus:border-primary-500 focus:ring-1 focus:ring-primary-500"
                     >
                       <option value="">Select budget range</option>
                       {budgetOptions.map((b) => (
@@ -197,7 +197,7 @@ const Contact = () => {
 
                   {/* Message */}
                   <div>
-                    <label className="block text-sm font-medium mb-2">
+                    <label className="block text-sm font-medium mb-2 text-gray-300">
                       Tell us about your goals
                     </label>
                     <textarea
@@ -205,7 +205,7 @@ const Contact = () => {
                       rows={5}
                       value={formData.message}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:border-black focus:ring-1 focus:ring-black"
+                      className="w-full px-4 py-3 border border-gray-600 rounded-md bg-gray-900 text-white placeholder-gray-400 focus:border-primary-500 focus:ring-1 focus:ring-primary-500"
                       placeholder="What are you looking to achieve?"
                     ></textarea>
                   </div>
@@ -218,9 +218,9 @@ const Contact = () => {
                       required
                       checked={formData.consent}
                       onChange={handleInputChange}
-                      className="w-4 h-4 text-black border-gray-400 rounded focus:ring-black focus:ring-1 mt-1"
+                      className="w-4 h-4 text-primary-500 border-gray-500 rounded focus:ring-primary-500 focus:ring-1 mt-1"
                     />
-                    <span className="text-sm text-black/70">
+                    <span className="text-sm text-gray-400">
                       I agree to receive marketing communications from Nainas Digital World.
                       You can unsubscribe any time.
                     </span>
@@ -228,13 +228,13 @@ const Contact = () => {
 
                   <button
                     type="submit"
-                    className="w-full text-lg px-8 py-4 rounded-md font-semibold bg-black text-white hover:bg-gray-800 transition-colors duration-200"
+                    className="w-full text-lg px-8 py-4 rounded-md font-semibold bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200"
                   >
                     Get Free Audit & Strategy
                   </button>
                 </form>
 
-                <p className="text-center text-black/50 text-sm mt-4">
+                <p className="text-center text-gray-400 text-sm mt-4">
                   You'll receive a response within 24 hours with your custom growth audit.
                 </p>
               </div>
@@ -242,15 +242,15 @@ const Contact = () => {
 
             {/* Contact Info */}
             <div className="space-y-8">
-              <div className="p-6 border border-gray-200 rounded-2xl bg-white shadow-sm">
-                <h3 className="font-[Syne] font-semibold text-lg mb-6">
+              <div className="p-6 border border-gray-700 rounded-2xl bg-gray-800 shadow-sm">
+                <h3 className="font-[Syne] font-semibold text-lg mb-6 text-white">
                   Get in Touch
                 </h3>
-                <div className="space-y-4 text-sm text-black/70">
+                <div className="space-y-4 text-sm text-gray-300">
                   <div className="flex items-start space-x-3">
-                    <MapPin className="w-5 h-5 text-black mt-1 flex-shrink-0" />
+                    <MapPin className="w-5 h-5 text-primary-500 mt-1 flex-shrink-0" />
                     <div>
-                      <p className="font-medium text-black">Address</p>
+                      <p className="font-medium text-white">Address</p>
                       <p>
                         [ADDRESS_LINE]
                         <br />
@@ -260,22 +260,19 @@ const Contact = () => {
                   </div>
 
                   <div className="flex items-start space-x-3">
-                    <Phone className="w-5 h-5 text-black mt-1" />
+                    <Phone className="w-5 h-5 text-primary-500 mt-1" />
                     <div>
-                      <p className="font-medium text-black">Phone</p>
-                      <a
-                        href="tel:+91XXXXXXXXXX"
-                        className="hover:underline"
-                      >
+                      <p className="font-medium text-white">Phone</p>
+                      <a href="tel:+91XXXXXXXXXX" className="hover:underline">
                         +91‑XXXXXXXXXX
                       </a>
                     </div>
                   </div>
 
                   <div className="flex items-start space-x-3">
-                    <Mail className="w-5 h-5 text-black mt-1" />
+                    <Mail className="w-5 h-5 text-primary-500 mt-1" />
                     <div>
-                      <p className="font-medium text-black">Email</p>
+                      <p className="font-medium text-white">Email</p>
                       <a
                         href="mailto:hello@nainasdigitalworld.com"
                         className="hover:underline"
@@ -286,9 +283,9 @@ const Contact = () => {
                   </div>
 
                   <div className="flex items-start space-x-3">
-                    <MessageCircle className="w-5 h-5 text-black mt-1" />
+                    <MessageCircle className="w-5 h-5 text-primary-500 mt-1" />
                     <div>
-                      <p className="font-medium text-black">WhatsApp</p>
+                      <p className="font-medium text-white">WhatsApp</p>
                       <a
                         href="https://wa.me/+91XXXXXXXXXX"
                         target="_blank"
@@ -301,9 +298,9 @@ const Contact = () => {
                   </div>
 
                   <div className="flex items-start space-x-3">
-                    <Clock className="w-5 h-5 text-black mt-1" />
+                    <Clock className="w-5 h-5 text-primary-500 mt-1" />
                     <div>
-                      <p className="font-medium text-black">Business Hours</p>
+                      <p className="font-medium text-white">Business Hours</p>
                       <p>Mon – Sat, 9:30 AM – 6:30 PM IST</p>
                     </div>
                   </div>
@@ -311,17 +308,17 @@ const Contact = () => {
               </div>
 
               {/* Quick contact */}
-              <div className="p-6 border border-gray-200 rounded-2xl bg-white shadow-sm">
-                <h3 className="font-[Syne] font-semibold text-lg mb-4">
+              <div className="p-6 border border-gray-700 rounded-2xl bg-gray-800 shadow-sm">
+                <h3 className="font-[Syne] font-semibold text-lg mb-4 text-white">
                   Need Immediate Help?
                 </h3>
-                <p className="text-black/70 text-sm mb-6">
+                <p className="text-gray-300 text-sm mb-6">
                   For urgent queries, contact us directly below.
                 </p>
                 <div className="space-y-3">
                   <a
                     href="tel:+91XXXXXXXXXX"
-                    className="w-full block text-center px-6 py-3 rounded-md font-semibold border border-black text-black hover:bg-black hover:text-white transition-colors duration-200"
+                    className="w-full block text-center px-6 py-3 rounded-md font-semibold border border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-white transition-colors duration-200"
                   >
                     Call Now
                   </a>
@@ -329,7 +326,7 @@ const Contact = () => {
                     href="https://wa.me/+91XXXXXXXXXX"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full block text-center px-6 py-3 rounded-md font-semibold bg-black text-white hover:bg-gray-800 transition-colors duration-200"
+                    className="w-full block text-center px-6 py-3 rounded-md font-semibold bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200"
                   >
                     WhatsApp Now
                   </a>
@@ -337,18 +334,18 @@ const Contact = () => {
               </div>
 
               {/* Map */}
-              <div className="p-6 border border-gray-200 rounded-2xl bg-white shadow-sm text-center">
-                <h3 className="font-[Syne] font-semibold text-lg mb-4">
+              <div className="p-6 border border-gray-700 rounded-2xl bg-gray-800 shadow-sm text-center">
+                <h3 className="font-[Syne] font-semibold text-lg mb-4 text-white">
                   Visit Our Office
                 </h3>
-                <div className="bg-gray-100 rounded-lg h-48 flex items-center justify-center mb-2">
-                  <p className="text-gray-500 text-sm">
+                <div className="bg-gray-700 rounded-lg h-48 flex items-center justify-center mb-2">
+                  <p className="text-gray-400 text-sm">
                     Google Maps Integration
                     <br />
                     <span className="text-xs">[GOOGLE_MAPS_EMBED]</span>
                   </p>
                 </div>
-                <p className="text-black/60 text-xs">
+                <p className="text-gray-400 text-xs">
                   Located in the heart of Kochi, Kerala
                 </p>
               </div>
