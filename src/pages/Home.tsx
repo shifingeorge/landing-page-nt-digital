@@ -1,7 +1,7 @@
 //import React from 'react';
 import heroimg from '../assets/hero.png';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Search, PenTool, Code, Megaphone, Clock,Users, PhoneCall } from 'lucide-react';
+import { ArrowRight, Search, PenTool, Code, Megaphone, Film, Clock,Users, PhoneCall } from 'lucide-react';
 
 const Home = () => {
 
@@ -57,19 +57,17 @@ const Home = () => {
     {/* Hero Section */}
 <section className="section-padding bg-gray-900 overflow-hidden">
   <div className="max-w-7xl mx-auto container-padding">
-    <div className="max-w-4xl mx-auto text-center animate-fade-in">
-      
+    <div className="text-center max-w-4xl mx-auto animate-fade-in">
       {/* Headline */}
-      <h1 className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-[Syne] font-bold text-white mb-6 leading-tight">
-        Beyond the Hype.&nbsp;Just Results.
-        <br />
-        Your Path to Digital Dominance.
+      <h1 className="text-4xl md:text-5xl lg:text-6xl font-[Syne] font-bold text-white mb-6 text-balance">
+        Beyond the Hype. Just Results.
       </h1>
-
+          
       {/* Subheadline */}
-      <p className="text-xl md:text-2xl text-gray-300 mb-8 font-thin">
-        From Meta & Google Ads to SEO and Social Media—our strategies put your business in front of the right people, at the right time.
+      <p className="mx-6 text-lg md:text-xl text-gray-300 mb-8 font-thin">
+        From Google Ads and Meta Ads to SEO and social media marketing, our digital marketing strategies put your business in front of the right audience at the right time.
       </p>
+      
 
       {/* CTA Buttons */}
       <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
