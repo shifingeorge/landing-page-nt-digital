@@ -1,46 +1,9 @@
 //import React from 'react';
 import heroimg from '../assets/hero.png';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Search, PenTool, Code, Megaphone, Film, Clock,Users, PhoneCall } from 'lucide-react';
+import { ArrowRight, Search, PenTool, Code, Megaphone, Clock,Users, PhoneCall } from 'lucide-react';
 
 const Home = () => {
-  const Services = [
-    {
-      id: 'seo',
-      icon: Search,
-      title: 'SEO Services in Kochi',
-      description: 'On-page, technical, local SEO, authority building.',
-      href: '/services#seo'
-    },
-    {
-      id: 'content',
-      icon: PenTool,
-      title: 'Content Writing',
-      description: 'Web copy, blogs, ad copy, Malayalam content.',
-      href: '/services#content'
-    },
-    {
-      id: 'web',
-      icon: Code,
-      title: 'Website Development in Kochi',
-      description: 'Fast, secure, SEO-first sites.',
-      href: '/services#web'
-    },
-    {
-      id: 'ads',
-      icon: Megaphone,
-      title: 'Meta Ads (Facebook/Instagram)',
-      description: 'Full-funnel creatives and optimization.',
-      href: '/services#ads'
-    },
-    {
-      id: 'movie',
-      icon: Film,
-      title: 'Movie Promotion in Kerala',
-      description: 'Digital buzz for trailers and theatrical runs.',
-      href: '/services#movie'
-    }
-  ];
 
   const processSteps = [
     {
