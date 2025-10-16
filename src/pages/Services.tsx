@@ -1,25 +1,32 @@
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { Search, PenTool, Code, Megaphone, Users, PhoneCall, ArrowRight, CheckCircle, HelpCircle } from 'lucide-react';
+import {
+  Search,
+  PenTool,
+  Code,
+  Megaphone,
+  Users,
+  PhoneCall,
+  ArrowRight,
+  CheckCircle,
+  HelpCircle,
+} from 'lucide-react';
 
 const Services = () => {
-   const location = useLocation();
+  const location = useLocation();
 
   useEffect(() => {
-    // if there's a hash (like #seo), scroll smoothly to that section after mount
     if (location.hash) {
       const el = document.querySelector(location.hash);
       if (el) {
         el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        const yOffset = -160; // adjust this number to match your header height
+        const yOffset = -160;
         const y =
           el.getBoundingClientRect().top + window.pageYOffset + yOffset;
-
         window.scrollTo({ top: y, behavior: 'smooth' });
       }
     } else {
-      // otherwise scroll to top when no hash
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   }, [location]);
@@ -147,20 +154,20 @@ const Services = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white text-black">
+    <div className="min-h-screen bg-gray-900 text-white">
       {/* Hero Section */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-gray-900">
         <div className="max-w-7xl mx-auto container-padding text-center">
           <div className="max-w-4xl mx-auto animate-fade-in">
             <h1 className="text-4xl md:text-5xl font-[Syne] font-bold mb-6">
               Our Digital Marketing Services
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-black/80">
+            <p className="text-xl md:text-2xl mb-8 text-gray-300">
               Expert strategies to boost your visibility, leads, and growth.
             </p>
             <Link
               to="/contact"
-              className="text-lg px-8 py-4 rounded-md font-semibold bg-black text-white hover:bg-gray-800 transition-colors duration-200 inline-flex items-center space-x-2"
+              className="text-lg px-8 py-4 rounded-md font-semibold bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200 inline-flex items-center space-x-2"
             >
               <span>Get Free Consultation</span>
               <ArrowRight className="w-5 h-5" />
@@ -170,7 +177,7 @@ const Services = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-gray-900">
         <div className="max-w-7xl mx-auto container-padding">
           <div className="space-y-20">
             {services.map((service, index) => {
@@ -187,7 +194,7 @@ const Services = () => {
                 >
                   <div className={isEven ? 'lg:order-1' : 'lg:order-2'}>
                     <div className="flex items-center space-x-4 mb-6">
-                      <div className="w-16 h-16 bg-black rounded-2xl flex items-center justify-center">
+                      <div className="w-16 h-16 bg-primary-500 rounded-2xl flex items-center justify-center">
                         <Icon className="w-8 h-8 text-white" />
                       </div>
                       <h2 className="text-2xl md:text-3xl font-[Syne] font-bold">
@@ -195,17 +202,17 @@ const Services = () => {
                       </h2>
                     </div>
 
-                    <p className="text-lg text-black font-medium mb-4">
+                    <p className="text-lg text-gray-200 font-medium mb-4">
                       {service.subtitle}
                     </p>
 
-                    <p className="text-black/70 mb-6 leading-relaxed">
+                    <p className="text-gray-400 mb-6 leading-relaxed">
                       {service.description}
                     </p>
 
                     <Link
                       to={service.ctaHref}
-                      className="inline-flex items-center space-x-2 px-6 py-3 rounded-md bg-black text-white hover:bg-gray-800 transition-colors duration-200"
+                      className="inline-flex items-center space-x-2 px-6 py-3 rounded-md bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200"
                     >
                       <span>{service.ctaText}</span>
                       <ArrowRight className="w-5 h-5" />
@@ -213,13 +220,18 @@ const Services = () => {
                   </div>
 
                   <div className={`${isEven ? 'lg:order-2' : 'lg:order-1'}`}>
-                    <div className="p-6 border border-gray-200 rounded-2xl shadow-sm bg-white">
-                      <h3 className="font-semibold text-lg mb-4">What's Included:</h3>
+                    <div className="p-6 border border-gray-700 rounded-2xl shadow-sm bg-gray-800">
+                      <h3 className="font-semibold text-lg mb-4 text-white">
+                        What's Included:
+                      </h3>
                       <ul className="space-y-3">
                         {service.deliverables.map((deliverable, idx) => (
-                          <li key={idx} className="flex items-start space-x-3">
-                            <CheckCircle className="w-5 h-5 text-black mt-0.5 flex-shrink-0" />
-                            <span className="text-black/70">{deliverable}</span>
+                          <li
+                            key={idx}
+                            className="flex items-start space-x-3 text-gray-300"
+                          >
+                            <CheckCircle className="w-5 h-5 text-primary-500 mt-0.5 flex-shrink-0" />
+                            <span>{deliverable}</span>
                           </li>
                         ))}
                       </ul>
@@ -233,25 +245,32 @@ const Services = () => {
       </section>
 
       {/* FAQs Section */}
-      <section className="section-padding bg-gray-50">
+      <section className="section-padding bg-gray-800">
         <div className="max-w-4xl mx-auto container-padding">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-[Syne] font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-[Syne] font-bold mb-4 text-white">
               Frequently Asked Questions
             </h2>
-            <p className="text-black/70 text-lg">
+            <p className="text-gray-300 text-lg">
               Everything you need to know about our services.
             </p>
           </div>
 
           <div className="space-y-8">
             {faqs.map((faq, index) => (
-              <div key={index} className="p-6 border border-gray-200 rounded-2xl shadow-sm bg-white">
+              <div
+                key={index}
+                className="p-6 border border-gray-700 rounded-2xl shadow-sm bg-gray-900"
+              >
                 <div className="flex items-start space-x-4">
-                  <HelpCircle className="w-6 h-6 text-black mt-1 flex-shrink-0" />
+                  <HelpCircle className="w-6 h-6 text-primary-500 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold text-lg mb-3">{faq.question}</h3>
-                    <p className="text-black/70 leading-relaxed">{faq.answer}</p>
+                    <h3 className="font-semibold text-lg mb-3 text-white">
+                      {faq.question}
+                    </h3>
+                    <p className="text-gray-300 leading-relaxed">
+                      {faq.answer}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -261,18 +280,19 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-gray-900">
         <div className="max-w-7xl mx-auto container-padding text-center">
-          <h2 className="text-3xl md:text-4xl font-[Syne] font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-[Syne] font-bold mb-4 text-white">
             Ready to Get Started?
           </h2>
-          <p className="text-black/70 text-lg mb-8 max-w-2xl mx-auto">
-            Let's discuss your goals and build a custom digital marketing plan to grow your business faster.
+          <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
+            Let's discuss your goals and build a custom digital marketing plan
+            to grow your business faster.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="text-lg px-8 py-4 rounded-md font-semibold bg-black text-white hover:bg-gray-800 transition-colors duration-200"
+              className="text-lg px-8 py-4 rounded-md font-semibold bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200"
             >
               Get Free Strategy Session
             </Link>
@@ -280,7 +300,7 @@ const Services = () => {
               href="https://wa.me/+91XXXXXXXXXX"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-lg px-8 py-4 rounded-md font-semibold border border-black text-black hover:bg-black hover:text-white transition-colors duration-200"
+              className="text-lg px-8 py-4 rounded-md font-semibold border border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-white transition-colors duration-200"
             >
               WhatsApp Us Now
             </a>
