@@ -68,8 +68,7 @@ const Footer = () => {
             </Link>
 
             <p className="text-gray-400 mb-6 max-w-md">
-              Digital marketing agency based in Kerala — experts in SEO, ads,
-              websites and content that grow your brand online.
+              Digital marketing agency in Kerala — specialists in SEO, Google & Meta Ads, website development, and content creation that help grow your brand and online presence.
             </p>
 
             {/* Contact Info */}
