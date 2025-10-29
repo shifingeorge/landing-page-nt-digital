@@ -7,19 +7,19 @@ const About = () => {
       icon: Target,
       title: 'Local Expertise',
       description:
-        'Deep understanding of Kerala markets and the cultural pulse that drives engagement.',
+        'We have a deep understanding of Kerala markets and the cultural pulse that drives meaningful engagement, helping your brand connect authentically with local audiences.',
     },
     {
       icon: Users,
       title: 'Transparency',
       description:
-        'Clear strategies, measurable outcomes, and full visibility at every step.',
+        'We provide clear strategies, measurable results, and full visibility at every step, ensuring you stay informed and confident in your digital marketing investment.',
     },
     {
       icon: TrendingUp,
       title: 'ROI Focus',
       description:
-        'We iterate fast, test smarter, and scale winning ideas to maximize returns.',
+        'We iterate quickly, test strategically, and scale what works to maximize your returns and ensure every marketing effort delivers measurable impact.',
     },
   ];
 
@@ -37,10 +37,10 @@ const About = () => {
       <section className="section-padding bg-gray-900 text-center">
         <div className="max-w-4xl mx-auto animate-fade-in">
           <h1 className="text-4xl md:text-5xl font-[Syne] font-bold mb-6">
-            About Nainas Digital World
+            About Us
           </h1>
           <p className="text-xl md:text-2xl mb-3 font-medium text-gray-300">
-            We build growth systems for Kerala brands.
+            We create growth-driven digital systems for Kerala brands, combining SEO, ads, websites, and content to boost visibility, leads, and conversions online.
           </p>
         </div>
       </section>
@@ -55,16 +55,13 @@ const About = () => {
               </h2>
               <div className="space-y-4 text-gray-300 leading-relaxed">
                 <p>
-                  Born in Kochi, we understand the unique challenges Kerala
-                  businesses face in the digital space. From startups to
-                  established brands — we’ve helped them all find their voice
-                  online.
+                  Born in Kochi, we understand the unique challenges Kerala businesses face in the digital space. From startups to established brands, we’ve helped them all find their voice online. What started as a small consulting project has grown into a full-fledged digital agency, blending global best practices with regional insights. Every campaign, website, and piece of content we create is designed to drive growth, visibility, and meaningful engagement for our clients.
                 </p>
-                <p>
+                {/*<p>
                   What started as a small consulting project became a
                   full‑fledged digital agency blending global best practices
                   with regional insights.
-                </p>
+                </p>*/}
                 <p>
                   Every campaign, website, and piece of content is designed with
                   one core goal: measurable growth.
@@ -129,8 +126,7 @@ const About = () => {
               Let's Grow Together
             </h2>
             <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
-              Ready to take your Kerala business to the next level?  
-              Reach out for a free consultation and discover how we can help you succeed.
+              Ready to take your Kerala business to the next level? Reach out for a free consultation and discover how our digital marketing expertise in SEO, ads, websites, and content can help your brand thrive online.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
