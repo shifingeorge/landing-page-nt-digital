@@ -73,26 +73,28 @@ const Footer = () => {
 
             {/* Contact Info */}
             <div className="space-y-3 text-sm">
+              <div className='hidden'>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-white" />
                 <span>[ADDRESS_LINE], Kochi, Kerala [PIN]</span>
               </div>
+              </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-white" />
                 <a
-                  href="tel:+91XXXXXXXXXX"
+                  href="tel:+918891498676"
                   className="hover:text-white transition-colors duration-200"
                 >
-                  +91‑XXXXXXXXXX
+                  +91 8891498676
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-white" />
                 <a
-                  href="mailto:hello@nainasdigitalworld.com"
+                  href="mailto:nainasworlddm@gmail.com"
                   className="hover:text-white transition-colors duration-200"
                 >
-                  hello@nainasdigitalworld.com
+                  nainasworlddm@gmail.com
                 </a>
               </div>
             </div>
@@ -114,6 +116,7 @@ const Footer = () => {
                   </Link>
                 </li>
               ))}
+              <div className='hidden'>
               <li>
                 <Link
                   to="/privacy"
@@ -130,6 +133,7 @@ const Footer = () => {
                   Terms of Service
                 </Link>
               </li>
+              </div>
             </ul>
           </div>
 
@@ -156,6 +160,7 @@ const Footer = () => {
         {/* Social & bottom row */}
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-800">
           <div className="mb-4 md:mb-0 flex flex-col items-center md:items-start">
+            <div className='hidden'>
             <div className="flex items-center space-x-4 mb-2">
               {socialLinks.map((social) => {
                 const Icon = social.icon;
@@ -173,6 +178,7 @@ const Footer = () => {
                 );
               })}
             </div>
+            </div>
             <p className="text-xs text-gray-500">
               Business Hours: Mon–Sat, 9:30 AM–6:30 PM IST
             </p>
@@ -180,10 +186,10 @@ const Footer = () => {
 
           <div className="text-center md:text-right">
             <p className="text-xs text-gray-500 mb-1">
-              Serving Kochi, Ernakulam, Kakkanad, Fort Kochi & all of Kerala
+              Serving your growth with powerful digital marketing solutions. 
             </p>
             <p className="text-xs text-gray-500">
-              © {currentYear} Nainas Digital World. All rights reserved.
+              © {currentYear} NT Digital. All rights reserved.
             </p>
           </div>
         </div>
