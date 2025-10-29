@@ -286,8 +286,7 @@ const Services = () => {
             Ready to Get Started?
           </h2>
           <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
-            Let's discuss your goals and build a custom digital marketing plan
-            to grow your business faster.
+            Let’s connect to discuss your goals and create a custom digital marketing strategy designed to boost visibility, generate leads, and grow your business <b className="text-primary-500 ">faster</b>.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
