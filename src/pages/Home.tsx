@@ -9,22 +9,22 @@ const Home = () => {
     {
       step: '01',
       title: 'Audit',
-      description: 'Complete analysis of your current digital presence'
+      description: 'Comprehensive analysis of your current digital presence, identifying strengths, weaknesses, and opportunities to improve visibility and engagement.'
     },
     {
       step: '02',
       title: 'Strategy',
-      description: 'Custom roadmap based on your goals and market'
+      description: 'Develop a custom roadmap tailored to your business goals, target audience, and market dynamics.'
     },
     {
       step: '03',
       title: 'Launch & Optimize',
-      description: 'Execute campaigns with continuous optimization'
+      description: 'Execute campaigns across channels with continuous optimization for performance, conversions, and ROI.'
     },
     {
       step: '04',
       title: 'Scale',
-      description: 'Amplify what works and expand your reach'
+      description: 'Amplify successful strategies, expand your reach, and maximize growth and revenue.'
     }
   ];
 
@@ -246,7 +246,7 @@ const Home = () => {
         How We Work
       </h2>
       <p className="text-gray-300 text-lg max-w-xl mx-auto">
-        Our proven 4‑step process
+        Our proven 4-step digital marketing process ensures measurable growth and consistent results:
       </p>
     </div>
 
