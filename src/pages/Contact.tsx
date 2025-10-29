@@ -7,9 +7,7 @@ const Contact = () => {
     email: '',
     phone: '',
     company: '',
-    website: '',
     services: [] as string[],
-    budget: '',
     message: '',
     consent: false,
   });
@@ -21,14 +19,6 @@ const Contact = () => {
     'Meta & Google Ads',
     'Social Media Management',
     'Other',
-  ];
-
-  const budgetOptions = [
-    'Under ₹25,000',
-    '₹25,000 – ₹50,000',
-    '₹50,000 – ₹1,00,000',
-    '₹1,00,000 – ₹2,00,000',
-    'Above ₹2,00,000',
   ];
 
   const handleInputChange = (
@@ -61,19 +51,21 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Hero */}
-      <section className="section-padding bg-gray-900 text-center">
+      <section className="pt-20 pb-8 bg-gray-900 text-center">
+        {/* 👆 Reduced vertical spacing (previously section-padding, now tighter) */}
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-[Syne] font-bold mb-6">
-            Contact Nainas Digital World
+            Contact Us
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8">
+          <p className="text-xl md:text-2xl text-gray-300 mb-0">
             Tell us your goals. Get a free growth audit within 24 hours.
           </p>
         </div>
       </section>
 
       {/* Form & Info */}
-      <section className="section-padding bg-gray-900">
+      <section className="pb-20 bg-gray-900">
+        {/* 👆 Removed extra padding-top so distance reduced */}
         <div className="max-w-7xl mx-auto container-padding">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Form */}
@@ -140,20 +132,6 @@ const Contact = () => {
                     </div>
                   </div>
 
-                  <div>
-                    <label className="block text-sm font-medium mb-2 text-gray-300">
-                      Website URL
-                    </label>
-                    <input
-                      type="url"
-                      name="website"
-                      placeholder="https://"
-                      value={formData.website}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-600 rounded-md bg-gray-900 text-white placeholder-gray-400 focus:border-primary-500 focus:ring-1 focus:ring-primary-500"
-                    />
-                  </div>
-
                   {/* Services */}
                   <div>
                     <label className="block text-sm font-medium mb-3 text-gray-300">
@@ -175,24 +153,6 @@ const Contact = () => {
                         </label>
                       ))}
                     </div>
-                  </div>
-
-                  {/* Budget */}
-                  <div>
-                    <label className="block text-sm font-medium mb-2 text-gray-300">
-                      Monthly Budget Range
-                    </label>
-                    <select
-                      name="budget"
-                      value={formData.budget}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-600 rounded-md bg-gray-900 text-white focus:border-primary-500 focus:ring-1 focus:ring-primary-500"
-                    >
-                      <option value="">Select budget range</option>
-                      {budgetOptions.map((b) => (
-                        <option key={b}>{b}</option>
-                      ))}
-                    </select>
                   </div>
 
                   {/* Message */}
@@ -221,7 +181,7 @@ const Contact = () => {
                       className="w-4 h-4 text-primary-500 border-gray-500 rounded focus:ring-primary-500 focus:ring-1 mt-1"
                     />
                     <span className="text-sm text-gray-400">
-                      I agree to receive marketing communications from Nainas Digital World.
+                      I agree to receive marketing communications from NT Digital.
                       You can unsubscribe any time.
                     </span>
                   </div>
@@ -247,15 +207,18 @@ const Contact = () => {
                   Get in Touch
                 </h3>
                 <div className="space-y-4 text-sm text-gray-300">
-                  <div className="flex items-start space-x-3">
-                    <MapPin className="w-5 h-5 text-primary-500 mt-1 flex-shrink-0" />
-                    <div>
-                      <p className="font-medium text-white">Address</p>
-                      <p>
-                        [ADDRESS_LINE]
-                        <br />
-                        Kochi, Kerala [PIN]
-                      </p>
+                  {/* address hidden */}
+                  <div className="hidden">
+                    <div className="flex items-start space-x-3">
+                      <MapPin className="w-5 h-5 text-primary-500 mt-1 flex-shrink-0" />
+                      <div>
+                        <p className="font-medium text-white">Address</p>
+                        <p>
+                          [ADDRESS_LINE]
+                          <br />
+                          Kochi, Kerala [PIN]
+                        </p>
+                      </div>
                     </div>
                   </div>
 
@@ -263,8 +226,8 @@ const Contact = () => {
                     <Phone className="w-5 h-5 text-primary-500 mt-1" />
                     <div>
                       <p className="font-medium text-white">Phone</p>
-                      <a href="tel:+91XXXXXXXXXX" className="hover:underline">
-                        +91‑XXXXXXXXXX
+                      <a href="tel:+918891498676" className="hover:underline">
+                        +91‑8891498676
                       </a>
                     </div>
                   </div>
@@ -274,10 +237,10 @@ const Contact = () => {
                     <div>
                       <p className="font-medium text-white">Email</p>
                       <a
-                        href="mailto:hello@nainasdigitalworld.com"
+                        href="mailto:nainasworlddm@gmail.com"
                         className="hover:underline"
                       >
-                        hello@nainasdigitalworld.com
+                        nainasworlddm@gmail.com
                       </a>
                     </div>
                   </div>
@@ -287,12 +250,12 @@ const Contact = () => {
                     <div>
                       <p className="font-medium text-white">WhatsApp</p>
                       <a
-                        href="https://wa.me/+91XXXXXXXXXX"
+                        href="https://wa.me/+918891498676"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:underline"
                       >
-                        +91‑XXXXXXXXXX
+                        +91‑8891498676
                       </a>
                     </div>
                   </div>
@@ -317,13 +280,13 @@ const Contact = () => {
                 </p>
                 <div className="space-y-3">
                   <a
-                    href="tel:+91XXXXXXXXXX"
+                    href="tel:+918891498676"
                     className="w-full block text-center px-6 py-3 rounded-md font-semibold border border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-white transition-colors duration-200"
                   >
                     Call Now
                   </a>
                   <a
-                    href="https://wa.me/+91XXXXXXXXXX"
+                    href="https://wa.me/+918891498676"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full block text-center px-6 py-3 rounded-md font-semibold bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200"
@@ -331,23 +294,6 @@ const Contact = () => {
                     WhatsApp Now
                   </a>
                 </div>
-              </div>
-
-              {/* Map */}
-              <div className="p-6 border border-gray-700 rounded-2xl bg-gray-800 shadow-sm text-center">
-                <h3 className="font-[Syne] font-semibold text-lg mb-4 text-white">
-                  Visit Our Office
-                </h3>
-                <div className="bg-gray-700 rounded-lg h-48 flex items-center justify-center mb-2">
-                  <p className="text-gray-400 text-sm">
-                    Google Maps Integration
-                    <br />
-                    <span className="text-xs">[GOOGLE_MAPS_EMBED]</span>
-                  </p>
-                </div>
-                <p className="text-gray-400 text-xs">
-                  Located in the heart of Kochi, Kerala
-                </p>
               </div>
             </div>
           </div>
