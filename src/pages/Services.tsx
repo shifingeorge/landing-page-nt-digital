@@ -36,14 +36,14 @@ const Services = () => {
       id: 'seo',
       icon: Search,
       title: 'SEO Services',
-      subtitle: 'Rank higher. Drive quality traffic. Improve conversions.',
+      subtitle: 'Rank higher. Attract the right audience.Drive real results.',
       description:
-        'We deliver complete SEO strategies for your business — from technical optimization to on‑page improvements and content planning, all designed to get your brand found easily.',
+        'We create end-to-end SEO strategies tailored for your brand — combining technical SEO, keyword optimization, and content marketing to increase organic traffic and strengthen your online presence.',
       deliverables: [
-        'Technical & on-page SEO',
-        'Local SEO optimization',
-        'Content recommendations',
-        'Monthly performance reports',
+        'Technical and On-Page SEO Optimization',
+        'Local SEO for Google Business visibility',
+        'Content Strategy & Keyword Recommendations',
+        'Monthly SEO Performance Reports',
       ],
       ctaText: 'Request SEO Audit',
       ctaHref: '/contact?service=seo',
@@ -54,12 +54,12 @@ const Services = () => {
       title: 'Content Writing',
       subtitle: 'Powerful, persuasive copy that connects and converts.',
       description:
-        'We craft impactful content — from website copy to blogs, ads, and social media messaging — focused on clarity, relevance, and engagement.',
+        'We craft impactful SEO content — from website copy, blogs, and ads to social media posts — focused on clarity, relevance, and audience engagement that strengthens your brand voice.',
       deliverables: [
-        'Web & landing copy',
-        'Blogs & thought pieces',
-        'Ad copy & brand tone',
-        'Content calendar planning',
+        'Web & Landing Page Copywriting',
+        'SEO Blogs and Thought Leadership Pieces',
+        'Ad Copy and Brand Tone Guidelines',
+        'Content Strategy & Calendar Planning',
       ],
       ctaText: 'Get Content Plan',
       ctaHref: '/contact?service=content',
@@ -68,14 +68,14 @@ const Services = () => {
       id: 'web',
       icon: Code,
       title: 'Website Development',
-      subtitle: 'Modern, SEO‑ready websites built for performance.',
+      subtitle: 'Fast, secure, and SEO-friendly website development tailored to your business goals.',
       description:
-        'Fast, secure, mobile‑optimized sites that showcase your brand and drive conversions. Built using scalable, modern frameworks.',
+        'Professional website development services delivering fast, SEO-ready, and responsive sites built with modern frameworks to boost conversions and brand visibility.',
       deliverables: [
-        'WordPress / Headless builds',
-        'E‑commerce / Landing pages',
-        'Performance & analytics setup',
-        'On‑page SEO configuration',
+        'WordPress or Headless Website Development',
+        'E-commerce and Conversion-Focused Landing Pages',
+        'Speed Optimization and Analytics Integration',
+        'On-Page SEO Setup for Better Search Visibility',
       ],
       ctaText: 'Start Your Website',
       ctaHref: '/contact?service=web',
@@ -86,12 +86,12 @@ const Services = () => {
       title: 'Meta & Google Ads',
       subtitle: 'Smart campaigns designed to attract and convert.',
       description:
-        'We plan, design, and optimize ad campaigns across Meta and Google to maximize visibility, clicks, and lead generation—all tracked for measurable ROI.',
+        'From Google Search to Meta Ads, we build and optimize campaigns that attract the right audience, drive traffic, and convert leads into customers — ensuring every click counts.',
       deliverables: [
-        'Campaign strategy & setup',
-        'Creatives & A/B testing',
-        'Pixel, events, and analytics integration',
-        'Ongoing optimization & reports',
+        'Campaign Strategy & Targeting',
+        'Ad Creatives & A/B Testing',
+        'Pixel, Event, and Analytics Setup',
+        'Continuous Optimization & Performance Reports',
       ],
       ctaText: 'Launch Ad Campaigns',
       ctaHref: '/contact?service=ads',
@@ -100,14 +100,14 @@ const Services = () => {
       id: 'targeted',
       icon: Users,
       title: 'Advertisement on Targeted Audience',
-      subtitle: 'Reach the exact people who fit your ideal customer profile.',
+      subtitle: 'Reach the right audience, every time.',
       description:
-        'We identify, segment, and advertise to your perfect audience using behavioral data, demographics, and location‑based targeting.',
+        'Reach your ideal customers with data-driven, targeted advertising across Google and Meta platforms, using behavioral, demographic, and location-based targeting for measurable ROI.',
       deliverables: [
-        'Audience research & targeting',
-        'Custom look‑alike segments',
-        'Ad placement & monitoring',
-        'Detailed targeting reports',
+        'Audience research & Segmentation',
+        'Look-Alike Audience Creation',
+        'Ad Placement & Performance Tracking',
+        'Detailed Reporting & Insights',
       ],
       ctaText: 'Target Your Audience',
       ctaHref: '/contact?service=targeted',
@@ -118,12 +118,12 @@ const Services = () => {
       title: 'Telecall & Lead Closing',
       subtitle: 'Human connection that turns leads into customers.',
       description:
-        'Our team strategically handles calls from leads generated online — answering queries, nurturing interest, and helping close more deals efficiently.',
+        'Professional telecalling and lead closing services to engage prospects, manage follow-ups, and convert leads into loyal customers.',
       deliverables: [
-        'Dedicated calling agents',
-        'Prompt lead follow‑up',
-        'Qualification & scheduling',
-        'Performance tracking reports',
+        'Dedicated Telecalling Agents',
+        'Quick Lead Follow-Up',
+        'Lead Qualification & Appointment Scheduling',
+        'Reporting & Performance Insights',
       ],
       ctaText: 'Set Up Telecalling',
       ctaHref: '/contact?service=telecall',
@@ -134,22 +134,22 @@ const Services = () => {
     {
       question: 'Do you serve clients outside Kerala?',
       answer:
-        'Yes, we collaborate with businesses across India and internationally, using our Kerala‑based expertise to create regionally informed digital strategies.',
+        'Yes! We partner with businesses across India and internationally, leveraging our Kerala-based expertise to craft regionally informed, high-impact digital marketing strategies that drive results wherever your audience is.',
     },
     {
       question: 'Can we get content in Malayalam?',
       answer:
-        'Absolutely. We create engaging and natural Malayalam content for posts, blogs, and ads — ideal for regional marketing and authenticity.',
+        'Absolutely! We craft engaging and natural Malayalam content for social media posts, blogs, and ad copy, helping your brand connect authentically with regional audiences and boost engagement.',
     },
     {
       question: 'What are your pricing models?',
       answer:
-        'We provide both project‑based and monthly retainer options. Project work starts at ₹25,000, while ongoing retainers begin at ₹15,000/month.',
+        'We offer flexible pricing with project-based services starting at ₹18,000 for a basic website and ₹25,000 for multi-page SEO-ready sites, and monthly retainers starting at ₹15,000/month for ongoing SEO, ads, and content marketing services',
     },
     {
       question: 'How soon can we begin?',
       answer:
-        'Typically within 7–10 business days after the initial consultation and strategy approval. Urgent timelines can also be accommodated.',
+        'Projects typically start within 7–10 business days after the initial consultation and strategy approval, with flexible options for urgent timelines if needed.',
     },
   ];
 
